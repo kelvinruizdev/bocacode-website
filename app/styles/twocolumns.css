@@ -1,0 +1,54 @@
+.two-columns-container{
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-direction: row;
+    padding: 8rem 2em;
+    align-items: center;
+}
+
+.two-columns-side{
+    display: flex; 
+    width: 50%;
+}
+
+.side-container{
+    display: flex;
+    flex-direction: column;
+    color: #E5E7EB;
+    gap: 16px;
+}
+
+.side-container h1{
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 48px;
+}
+
+.side-container h2{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32.5px;
+}
+
+.side-container p{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32.5px;
+}
+
+.buttons{
+    display: flex;
+    gap: 16px;
+    margin: 16px 0 0 0;
+}
+
+.buttons div{
+    display: flex;
+    width: fit-content;
+    border-radius: 6px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 48px;
+}

@@ -1,0 +1,21 @@
+{
+    "heading": "Get the training you need to land the <p style='color: #FACC15; font-size: 48px; font-weight: 800; line-height: 48px;'>job of your dreams.</p>",
+    "sub_heading": "",
+    "content": "Whether you're a beginner or have years of experience, we have courses to help you learn and be certified in software engineering, web development, mobile development, security, dev-ops, project management, Web3, AI, and more.",
+    "bullets": [],
+    "image": "",
+    "buttons": [
+        {
+            "button_text": "Get Started",
+            "button_link": "/",
+            "button_color": "#FACC15",
+            "button_textcolor": "#1e1b4b"
+        },
+        {
+            "button_text": "Find a Course",
+            "button_link": "/",
+            "button_color": "#E5E7EB",
+            "button_textcolor": "#1e1b4b"
+        }
+    ]
+}

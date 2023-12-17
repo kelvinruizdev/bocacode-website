@@ -1,52 +1,83 @@
 import React from "react";
 import Link from "next/link";
+import '../../styles/twocolumns.css'
 
 const Side = ({
-    video,
-    image,
-    header,
-    heading,
-    sub_heading,
-    content,
-    button,
-    bullets,
-    session,
-  }) => {
-  
-    if (image) {
-      return (
-        <></>
-      );
-    }
-  
+  video,
+  image,
+  header,
+  heading,
+  sub_heading,
+  content,
+  buttons,
+  bullets,
+  session,
+}) => {
+
+  console.log(buttons)
+
+  if (image) {
     return (
-      <div
-        // flexDirection_tablet="column"
-        // flexDirection="column"
-        // padding_tablet={padding_tablet || "10px 0px 0px 0px"}
-      >
-        <h1>{heading}</h1>
-        {/* {header && (
-          <div
-            margin="0 0 30px 0"
-            justifyContent="center"
-            justifyContent_md="start"
-          >
-            {Array.isArray(header) &&
-              header.map((item, index) => {
+      <></>
+    );
+  }
+
+  return (
+    <div
+      // flexDirection_tablet="column"
+      // flexDirection="column"
+      // padding_tablet={padding_tablet || "10px 0px 0px 0px"}
+      className="side-container"
+    >
+      {
+        heading &&
+        <h1
+          dangerouslySetInnerHTML={{__html: heading}}
+        />
+      }
+      {
+        sub_heading &&
+        <h2>{heading}</h2>
+      }
+      {
+        content &&
+        <p>{content}</p>
+      }
+
+      {Array.isArray(bullets?.items) && (
+        <>
+
+          {
+            bullets.map((bullet, index) => {
+              return (
+                <></>
+              )
+            })
+          }
+
+        </>
+      )}
+
+      {
+        buttons && (
+            <div
+              className="buttons"
+            >{
+              buttons.map((button, index) => {
                 return (
-                  <RoundImage
-                    key={index}
-                    url={item.image}
-                    bsize="contain"
-                    height="20px"
-                    width="130px"
-                    position="left"
-                  />
-                );
+                <Link href={button.button_link}>
+                  <div
+                    style={{ background: `${button.button_color}`,
+                  color: `${button.button_textcolor}`}}
+
+                  >{button.button_text}</div>
+                </Link>
+                )
               })}
-          </div>
-        )}
+            </div>
+          )
+      }
+      {/*
         {heading && (
           <H2
             type="h2"
@@ -220,52 +251,24 @@ const Side = ({
             {button.text}
           </Button>
         )} */}
-      </div>
-    );
-  };
-  
-  const TwoColumn = ({ left, right, proportions, session }) => {
-  
-    return (
-      <div
-        // flexDirection="column"
-        // gap={left?.gap || right?.gap || "0px"}
-        // gap_tablet={left?.gap_tablet || right?.gap_tablet || "20px"}
-        // flexDirection_tablet="row"
-        // m_sm="0px auto 100px auto"
-        // margin="auto"
-        // padding_xxs="40px 20px"
-        // padding_md="40px 80px"
-        // padding_lg="40px 0px"
-        // padding_tablet="40px 40px"
-        // width_tablet="100%"
-        // maxWidth_md="1366px"
-      >
-        <div
-        //   justifyContent={left?.video && "center"}
-        //   flexDirection="column"
-        //   size_tablet={left_size || 6}
-        //   size="12"
-        //   padding_xs="0"
-        //   padding_md={right?.image?.shadow ? "0 20px 0 0 " : "0px"}
-        //   // maxHeight="300px"
-        //   textAlign="center"
-        >
-          <Side {...left} />
-        </div>
-        <div
-        //   justifyContent={right?.video && "center"}
-        //   flexDirection="column"
-        //   size_tablet={right_size || 6}
-        //   padding_xs="0"
-        //   padding_md={left?.image?.shadow ? "0 0 0 20px" : "0px"}
-        //   size="12"
-        //   textAlign="center"
-        >
-          <Side session={session} {...right} />
-        </div>
-      </div>
-    );
-  };
+    </div>
+  );
+};
 
-  export default TwoColumn;
+const TwoColumns = ({ left, right, proportions }) => {
+  console.log(left)
+  return (
+    <div
+      className="two-columns-container"
+    >
+      <div className="two-columns-side">
+        <Side {...left} />
+      </div>
+      <div className="two-columns-side">
+        <Side {...right} />
+      </div>
+    </div>
+  );
+};
+
+export default TwoColumns;
