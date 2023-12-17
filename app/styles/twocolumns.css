@@ -1,8 +1,6 @@
 .two-columns-container{
-    display: flex;
     max-width: 1280px;
     margin: 0 auto;
-    flex-direction: row;
     padding: 8rem 2em;
     align-items: center;
 }
@@ -13,8 +11,6 @@
 }
 
 .side-container{
-    display: flex;
-    flex-direction: column;
     color: #E5E7EB;
     gap: 16px;
 }

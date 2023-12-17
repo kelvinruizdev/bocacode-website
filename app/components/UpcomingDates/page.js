@@ -359,11 +359,11 @@ const UpcomingDates = ({
                           errorMsg="Please specify a valid email"
                           required
                         />
-                        {/* <button type="submit">{formStatus.status === "loading" ? "Loading..." : "text"}</button> */}
+                       
                         <Button
                           height="40px"
                           background={Colors.blue}
-                          // margin="0 0 0 10px"
+                          margin="0 0 0 10px"
                           type="submit"
                           fontWeight="700"
                           justifyContent="center"
@@ -402,7 +402,7 @@ const UpcomingDates = ({
               </Link>
             )} */}
         </div>
-      </div>
+    )</div>
     );
   };
   

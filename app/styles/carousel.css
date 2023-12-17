@@ -1,0 +1,5 @@
+.carousel-container{
+    overflow-x: auto;
+    gap: 32px;
+    margin: 0 auto;
+}
