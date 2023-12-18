@@ -1,0 +1,24 @@
+.footer-container{
+    background: rgb(30, 27, 75);
+    color: rgb(212, 212, 216);
+    padding: 32px;
+    
+}
+
+.footer-first-section{
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 0 10px 0;
+}
+
+.footer-second-section{
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-top: 1px solid rgb(212, 212, 216);
+    padding: 10px 0 0 0;
+    font-size: 12px;
+}

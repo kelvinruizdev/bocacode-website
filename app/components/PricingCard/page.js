@@ -1,4 +1,4 @@
-import Icon from "../Icon/check";
+import Icon from "../Icon/set/check";
 import '../../styles/pricingcard.css'
 import Link from "next/link";
 
@@ -13,7 +13,6 @@ const PricingCard = ({
   index,
 }) => {
 
-  console.log(data_variable, data_static, "asdasdasd")
   return (
     <>
       <div className="pricingcard-container row">

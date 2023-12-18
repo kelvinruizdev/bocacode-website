@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@loadable/component": "^5.16.2",
     "gray-matter": "^4.0.3",
     "next": "14.0.4",
     "react": "^18",
