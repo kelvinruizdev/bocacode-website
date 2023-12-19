@@ -2,12 +2,6 @@
     color: #E5E7EB;
 }
 
-.buttons{
-    display: flex;
-    gap: 16px;
-    margin: 16px 0 0 0;
-}
-
 .buttons div{
     display: flex;
     width: fit-content;

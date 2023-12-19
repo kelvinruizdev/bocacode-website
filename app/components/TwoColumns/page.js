@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import '../../styles/twocolumns.css'
+import '../../styles/path.css'
 import Image from "next/image";
+import Icon from "../Icon/pages";
 
 const Side = ({
   video,
@@ -12,8 +14,10 @@ const Side = ({
   content,
   buttons,
   bullets,
-  session,
+  steps,
+  complement,
 }) => {
+  console.log(bullets)
 
   if (image) {
     return (
@@ -52,24 +56,91 @@ const Side = ({
       {
         content &&
         <p
-          style={{ color: `${heading.color}`, fontSize: `${content.font_size}`, fontWeight: `${content.font_weight}`, lineHeight: `${content.line_height}` }}
+          style={{ color: `${content.color}`, fontSize: `${content.font_size}`, fontWeight: `${content.font_weight}`, lineHeight: `${content.line_height}` }}
           dangerouslySetInnerHTML={{ __html: content.text }}
         />
       }
+      {
+        complement &&
+        <div className="text-center">
+          <p
+            style={{ color: `${complement.color}`, fontSize: `${complement.font_size}`, fontWeight: `${complement.font_weight}`, lineHeight: `${content.line_height}` }}
+            dangerouslySetInnerHTML={{ __html: complement.text }}
+          />
+        </div>
+      }
+      {Array.isArray(bullets) && (
+        <div className="column py-30 gap-45">
+          {
+            bullets?.map((bullet, index) => {
+              const { icon, heading, content } = bullet;
+              return (
+                <div className="row ">
+                  <div style={{background: `${icon.background}`}} 
+                    className=" rounded-6 size-48 align-items-center flex justify-center">
+                    <Icon icon={icon.name} width="24" />
+                  </div>
 
-      {Array.isArray(bullets?.items) && (
+                  <div className="w-90 column px-16 rounded-4 ">
+                    {
+                      heading &&
+                      <h1
+                        style={{ color: `${heading.color}`, fontSize: `${heading.font_size}`, fontWeight: `${heading.font_weight}`, lineHeight: `${heading.line_height}` }}
+                        className=""
+                        dangerouslySetInnerHTML={{ __html: heading.text }}
+                      />
+                    }
+                    {
+                      content &&
+                      <p
+                        className="py-8"
+                        style={{ color: `${content.color}`, fontSize: `${content.font_size}`, fontWeight: `${content.font_weight}`, lineHeight: `${content.line_height}` }}
+                        dangerouslySetInnerHTML={{ __html: content.text }}
+                      />
+                    }
+                  </div>
+                </div>
+              )
+            })
+          }
+
+        </div>
+      )}
+      {Array.isArray(steps) && (
         <>
           {
-            bullets.map((bullet, index) => {
+            steps.map((step, index) => {
+              const { heading, content } = step;
               return (
-                <></>
+                <div className="row">
+                  <span
+                    className='span fs-24 fw-700 lh-36 justify-center align-center w-10'
+                  >{`${index + 1}`}</span>
+                  <div style={{ background: `${step.background}` }} className="w-90 column px-16 rounded-4">
+                    {
+                      heading &&
+                      <h1
+                        style={{ color: `${heading.color}`, fontSize: `${heading.font_size}`, fontWeight: `${heading.font_weight}`, lineHeight: `${heading.line_height}` }}
+                        className="py-16"
+                        dangerouslySetInnerHTML={{ __html: heading.text }}
+                      />
+                    }
+                    {
+                      content &&
+                      <p
+                        className="py-8"
+                        style={{ color: `${content.color}`, fontSize: `${content.font_size}`, fontWeight: `${content.font_weight}`, lineHeight: `${content.line_height}` }}
+                        dangerouslySetInnerHTML={{ __html: content.text }}
+                      />
+                    }
+                  </div>
+                </div>
               )
             })
           }
 
         </>
       )}
-
       {
         buttons && (
           <div
@@ -104,7 +175,7 @@ const TwoColumns = ({ left, right, proportions }) => {
       <div className="flex w-50">
         <Side {...left} />
       </div>
-      <div className="flex w-50">
+      <div className="flex w-50 justify-end">
         <Side {...right} />
       </div>
     </div>
