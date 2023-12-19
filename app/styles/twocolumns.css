@@ -1,38 +1,5 @@
-.two-columns-container{
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 8rem 0;
-    align-items: center;
-    gap: 0px 20px;
-}
-
-.two-columns-side{
-    display: flex; 
-    width: 50%;
-    
-}
-
 .side-container{
     color: #E5E7EB;
-    gap: 16px;
-}
-
-.side-container h1{
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 48px;
-}
-
-.side-container h2{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 32.5px;
-}
-
-.side-container p{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 32.5px;
 }
 
 .buttons{

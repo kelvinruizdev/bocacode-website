@@ -1,12 +1,17 @@
 {
     "header": {
         "heading": {
-            "text":"Get the training you need to land the <p style='color: #FACC15; font-size: 48px; font-weight: 800; line-height: 48px;'>job of your dreams.</p>",
-            "color": "rgb(229, 231, 235)"
+            "text": "Get the training you need to land the <p style='color: #FACC15; font-size: 48px; font-weight: 800; line-height: 48px;'>job of your dreams.</p>",
+            "color": "rgb(229, 231, 235)",
+            "font_size": "48px",
+            "font_weight": "800"
         },
         "content": {
-            "text":"Whether you're a beginner or have years of experience, we have courses to help you learn and be certified in software engineering, web development, mobile development, security, dev-ops, project management, Web3, AI, and more.",
-            "color":"rgb(229, 231, 235)"
+            "text": "Whether you're a beginner or have years of experience, we have courses to help you learn and be certified in software engineering, web development, mobile development, security, dev-ops, project management, Web3, AI, and more.",
+            "color": "rgb(229, 231, 235)",
+            "font_size": "20px",
+            "font_weight": "400",
+            "line_height":"33px"
         },
         "bullets": [],
         "image": "",

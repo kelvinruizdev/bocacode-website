@@ -33,7 +33,7 @@ const Side = ({
 
   return (
     <div
-      className="side-container column"
+      className="side-container gap-16 column"
     >
       {
         heading &&
@@ -99,12 +99,12 @@ const Side = ({
 const TwoColumns = ({ left, right, proportions }) => {
   return (
     <div
-      className="two-columns-container row"
+      className="align-items-center gap-45 py-50 maxwidth-1280 m-auto row"
     >
-      <div className="two-columns-side">
+      <div className="flex w-50">
         <Side {...left} />
       </div>
-      <div className="two-columns-side">
+      <div className="flex w-50">
         <Side {...right} />
       </div>
     </div>

@@ -44,20 +44,28 @@ export default function Home() {
 
   console.log(title_container[0])
 
-
-
   return (
     <main className={styles.main}>
       <PageHeader backgroundImage="landing-image" data={data.header} />
 
-      <TitleContainer data={title_container[0]}/>
+      <TitleContainer 
+        data={title_container[0]} 
+        classContainer="text-center w-50 py-50 m-auto gap-16"
+        classHeading="fs-36 fw-700 lh-36" 
+        classParagraph="fs-16 fw-400 lh-28"
+      />
 
       <Carousel data={data?.carousel} />
 
-      <TitleContainer data={title_container[1]}/>
+      <TitleContainer 
+        data={title_container[1]} 
+        classContainer="text-center w-50 py-30 m-auto gap-16"
+        classHeading="fs-36 fw-700 lh-36" 
+        classParagraph="fs-16 fw-400 lh-28"
+      />
 
       {(data?.pricing_info_variable && data?.pricing_info_static) && (
-        <div style={{gap: "16px 0"}}>
+        <div className='gap-24 column py-30'>
 
           {data?.pricing_info_variable?.map((card, index) => {
             return (
@@ -73,7 +81,12 @@ export default function Home() {
       )}
       <Credentials />
 
-      <TitleContainer data={title_container[2]}/>
+      <TitleContainer 
+        data={title_container[0]} 
+        classContainer="text-center w-50 py-50 m-auto gap-16"
+        classHeading="fs-36 fw-700 lh-36" 
+        classParagraph="fs-16 fw-400 lh-28"
+      />
 
       <Paths />
 

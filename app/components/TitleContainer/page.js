@@ -4,12 +4,12 @@ import '../../styles/titlecontainer.css'
 import TwoColumns from '../TwoColumns/page'
 
 
-const TitleContainer = ({ data }) => {
+const TitleContainer = ({ data, classContainer, classHeading, classParagraph }) => {
     return (
         <>
-            <div className="title-container column">
-                {data?.heading && <h1>{data?.heading}</h1>}
-                {data?.paragraph && <p
+            <div className={`${classContainer} column`}>
+                {data?.heading && <h1 className={classHeading}>{data?.heading}</h1>}
+                {data?.paragraph && <p className={classParagraph}
                     dangerouslySetInnerHTML={{ __html: data?.paragraph}}
                 />}
             </div>

@@ -1,0 +1,35 @@
+{
+
+    "two_columns": {
+        "left": {
+            "heading": {
+                "text": "Making quality tech education accessible to all",
+                "color": "rgb(24, 24, 27)",
+                "font_size": "36px"
+            },
+            "content": {
+                "text": "Whether you're a beginner or have years of experience, we have courses to help you learn and be certified in software engineering, web development, mobile development, security, dev-ops, project management, Web3, AI, and more.",
+                "color": "rgb(113, 113, 122)",
+                "font_size": "16px",
+                "font_weight": "400",
+                "line_height": "24px"
+            },
+            "buttons": [
+                {
+                    "button_text": "Schedule a Call",
+                    "button_link": "/",
+                    "button_color": "rgb(225, 29, 72)",
+                    "button_textcolor": "rgb(250, 250, 250)",
+                    "button_fontsize": "16px"
+                }
+            ]
+        },
+        "right": {
+            "image": "/images/pics-group.png"
+        }
+    }
+
+
+
+
+}

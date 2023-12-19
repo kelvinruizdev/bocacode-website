@@ -6,8 +6,8 @@ import Card from "../Card/page";
 
 const Carousel = ({ data }) => {
     return (
-        <>
-            <div className="carousel-container row">
+        <div className="maxwidth-1280 m-auto">
+            <div className=" gap-45 row">
                 {
                     data?.map((card, index) => {
                         return(
@@ -16,7 +16,7 @@ const Carousel = ({ data }) => {
                     })
                 }
             </div>
-        </>
+        </div>
     );
 };
 

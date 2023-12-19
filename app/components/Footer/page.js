@@ -12,7 +12,7 @@ const Footer = () => {
         <>
             <footer className="footer-container">
 
-                <div className="row footer-first-section">
+                <div className="row maxwidth-1280 py-10 m-auto justify-beetwen align-items-center">
 
                     <Link href="#home">
                         <Image
@@ -41,7 +41,7 @@ const Footer = () => {
                         }
                     </ul>
                 </div>
-                <div className="row footer-second-section">
+                <div className="row fs-12 footer-second-section maxwidth-1280 py-10 m-auto justify-beetwen align-items-center">
                     <p>© 2023 Boca Code. All rights reserved.</p>
 
                     <div className="row" style={{ gap: "0 20px" }}>

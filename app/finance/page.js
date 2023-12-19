@@ -1,13 +1,31 @@
-import React from "react";
-import TwoColumn from "../components/TwoColumns/page";
+'use client';
+import React, {useEffect, useState}from "react";
+import styles from '../page.module.css'
+import TwoColumns from "../components/TwoColumns/page";
 
-const Finance = () => {
+
+function getData() {
+
+  const [data, setData] = useState({})
+
+  useEffect(() => {
+    fetch("/data/financing.json")
+      .then(response => response.json())
+      .then(data => { setData(data) })
+  }, [])
+  return data;
+}
+
+const Financing = () => {
+
+  const data = getData();
+
   return (
-    <div>
+    <main className={styles.main}>
       <h1>Finance</h1>
-      <TwoColumn left={{heading: "casas", sub_heading: "casitas"}}/>
-    </div>
+      <TwoColumns left={data?.two_columns?.left} right={data?.two_columns?.right} />
+    </main>
   );
 };
 
-export default Finance;
+export default Financing;
