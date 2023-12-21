@@ -19,16 +19,7 @@
     position: relative;
 }
 
-
-.card-content {
-    padding: 16px;
-    gap: 8px;
-}
-
 .card-content h3{
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
     color: #18181B;
 }
 
@@ -37,6 +28,14 @@
     font-size: 14px;
     line-height: 23px;
     color: #18181B;
+}
+
+/*CARD ALUMNI VARIANT */
+.card-alumni-body{
+    min-width: 130px;
+    width: 140px;
+    max-width: 200px;
+    height: fit-content;
 }
 
 /*CARD PROFILE VARIANT */

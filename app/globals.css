@@ -18,7 +18,7 @@ a {
   text-decoration: none;
 }
 
-.buttons{
+.buttons {
   display: flex;
   gap: 16px;
   margin: 16px 0 0 0;
@@ -43,7 +43,7 @@ a {
   overflow-y: auto !important;
 }
 
-.bg-zinc{
+.bg-zinc {
   background-color: rgb(244, 244, 245);
 }
 
@@ -57,7 +57,7 @@ a {
   max-width: 1280px;
 }
 
-.size-48{
+.size-48 {
   width: 48px;
   height: 48px;
 }
@@ -65,26 +65,31 @@ a {
 .height-100 {
   height: 100%;
 }
-.h-fit-content{
+
+.h-fit-content {
   height: fit-content;
 }
 
-.w-fit-content{
+.w-fit-content {
   width: fit-content;
 }
 
 .w-100 {
   width: 100%;
 }
+
 .w-90 {
   width: 90%;
 }
+
 .w-80 {
   width: 80%;
 }
+
 .w-50 {
   width: 50%;
 }
+
 .w-10 {
   width: 10%;
 }
@@ -117,6 +122,7 @@ a {
 .justify-beetwen {
   justify-content: space-between;
 }
+
 .justify-end {
   justify-content: end;
 }
@@ -125,15 +131,24 @@ a {
   justify-content: space-around;
 }
 
-.align-center{
+.align-center {
   align-items: center;
 }
 
 /*BACKGROUNDS*/
 
 
+
 .absolute {
   position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.right-0 {
+  right: 0%;
 }
 
 /*SHADOWS $ BORDERS*/
@@ -153,9 +168,11 @@ a {
 .rounded-8 {
   border-radius: 8px;
 }
+
 .rounded-6 {
   border-radius: 6px;
 }
+
 .rounded-4 {
   border-radius: 4px;
 }
@@ -192,9 +209,11 @@ a {
 .fs-30 {
   font-size: 30px;
 }
+
 .fs-24 {
   font-size: 24px;
 }
+
 .fs-20 {
   font-size: 20px;
 }
@@ -240,6 +259,10 @@ a {
   line-height: 48px;
 }
 
+.lh-40 {
+  line-height: 40px;
+}
+
 .lh-36 {
   line-height: 36px;
 }
@@ -251,6 +274,7 @@ a {
 .lh-24 {
   line-height: 24px;
 }
+
 .lh-20 {
   line-height: 20px;
 }
@@ -270,11 +294,15 @@ a {
 
 
 /* PADDING & MARGIN & GAP */
-.p-12{
+.p-12 {
   padding: 12px;
 }
 
-.p-12-48{
+.p-16 {
+  padding: 16px;
+}
+
+.p-12-48 {
   padding: 12px 48px;
 }
 
@@ -285,33 +313,52 @@ a {
 .py-50 {
   padding: 50px 0;
 }
+
 .py-30 {
   padding: 30px 0;
 }
+
 .py-16 {
   padding: 16px 0;
 }
+
 .py-10 {
   padding: 10px 0;
 }
+
 .py-8 {
   padding: 8px 0;
+}
+
+.pt-8 {
+  padding: 8px 0 0 0;
 }
 
 .m-auto {
   margin: 0 auto;
 }
 
+.gap-80 {
+  gap: 80px;
+}
+
 .gap-45 {
   gap: 45px;
 }
+
 .gap-24 {
   gap: 24px;
 }
-.gap-16{
+
+.gap-16 {
   gap: 16px;
 }
-.gap-4{
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-4 {
   gap: 4px;
 }
 
@@ -320,4 +367,22 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.modal-video {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1000000;
+  cursor: pointer;
+  opacity: 1;
+  animation-timing-function: ease-out;
+  animation-duration: .3s;
+  animation-name: modal-video;
+  transition: opacity .3s ease-out;
 }

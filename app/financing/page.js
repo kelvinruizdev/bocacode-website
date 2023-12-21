@@ -21,7 +21,6 @@ function getData() {
 const Financing = () => {
 
   const data = getData();
-  console.log(data?.info?.button?.button_link)
   return (
     <main className={styles.main}>
       <TwoColumns left={data?.two_columns?.left} right={data?.two_columns?.right} />

@@ -19,9 +19,8 @@ function getData() {
 }
 
 const Candidates = () => {
-  const data = getData();
 
-  console.log(data)
+  const data = getData();
 
   return (
     <main className={styles.main}>
@@ -34,7 +33,7 @@ const Candidates = () => {
       />
 
       {data?.candidates && (
-        <div className='row gap-45 wrap py-30 justify-center maxwidth-1280 margin-auto'>
+        <div className='row gap-45 wrap py-30 justify-center maxwidth-1280 m-auto'>
 
           {data?.candidates?.map((card, index) => {
             return (

@@ -42,8 +42,6 @@ export default function Home() {
 
   const data = getData();
 
-  console.log(title_container[0])
-
   return (
     <main className={styles.main}>
       <PageHeader backgroundImage="landing-image" data={data.header} />

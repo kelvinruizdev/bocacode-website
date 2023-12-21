@@ -1,17 +1,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import React from 'react'
+import ReactPlayer from 'react-player/youtube'
+import VideoModal from "../VideoModal/page.js";
 import '../../styles/card.css'
 
 
-const Card = ({ data, carousel, link_text, profile }) => {
+const Card = ({ data, carousel, link_text, profile, alumni }) => {
     const { video, image, profileImage, title, content, link } = data;
+
+    const [play, setPlay] = React.useState(false);
+
     return (
         <>
             <div className={profile ? "card-profile-body box-shadow-v1 rounded-16 column relative"
-                    : "card-container"}
+                : alumni ? "card-alumni-body column align-center" : "card-container"}
             >
-                {(image || video) &&
+                {(image && !video) &&
                     <div
                         className=""
                         style={{
@@ -30,36 +36,96 @@ const Card = ({ data, carousel, link_text, profile }) => {
                         />
                     </div>
                 }
+                {(video) &&
+                    <div
+                        className=""
+                        style={{
+                            boxShadow: `${carousel && "box-shadow: 0px 10px 25px -12px rgba(0,0,0,0.67)"}`,
+                        }}
+                    >{play ? 
+                    <>
+                        <VideoModal
+                            videoLink={video}
+                            play
+                        />
+                        <div className="relative" onClick={() => { setPlay(true) }}>
+                            <Image
+                                src={image}
+                                className=""
+                                width={profile ? 284 : 384}
+                                height={profile ? 112 : 224}
+                                style={{
+                                    width: "100%"
+                                }}
+                            />
+                            <Image
+                                src={"/images/play-button.png"}
+                                className="absolute right-0"
+                                width={profile ? 284 : 384}
+                                height={profile ? 112 : 224}
+                                style={{
+                                    width: "100%"
+                                }}
+                            />
+                        </div>
+                    </>
+                        : (
+                            <div className="relative" onClick={() => { setPlay(true) }}>
+                                <Image
+                                    src={image}
+                                    className=""
+                                    width={profile ? 284 : 384}
+                                    height={profile ? 112 : 224}
+                                    style={{
+                                        width: "100%"
+                                    }}
+                                />
+                                <Image
+                                    src={"/images/play-button.png"}
+                                    className="absolute right-0"
+                                    width={profile ? 284 : 384}
+                                    height={profile ? 112 : 224}
+                                    style={{
+                                        width: "100%"
+                                    }}
+                                />
+                            </div>
+                        )
+                        }
+                    </div>
+                }
                 {profileImage && (
                     <div
-                        className="absolute centerer"
+                        className={profile ? "absolute centerer" : "flex justify-content-center"}
                     >
-                        <Image
-                            src={profileImage}
-                            className="border-royalblue round"
-                            width={108}
-                            height={108}
-
-                        />
+                        <Link href={alumni ? link.toLowerCase() : ""} className="">
+                            <Image
+                                src={profileImage}
+                                className="border-royalblue round"
+                                width={profile ? 108 : 80}
+                                height={profile ? 108 : 80}
+                                alt="profile"
+                            />
+                        </Link>
                     </div>
                 )}
                 {(title || content) &&
-                    <div className={profile ? "card-profile-content height-100 justify-beetwen column align-items-center text-center" : 
-                        "card-content column"}
+                    <div className={profile ? "card-profile-content height-100 justify-beetwen column align-items-center text-center" :
+                        alumni ? "text-center pt-8" : "p-16 gap-8 column"}
                     >
-                        <div className="column"> 
+                        <div className="column">
                             {title &&
-                                <h3 className="fs-20 fw-500 lh-28">{title}</h3>
+                                <h3 className={profile ? "fs-20 fw-500 lh-28" : alumni ? "fs-18 fw-500 lh-28" : "fs-18 fw-500 lh-28"}>{title}</h3>
                             }
                             {content &&
-                                <div><p className="fs-12 fw-400">{content}</p></div>
+                                <div><p className={carousel ? "fs-14 fw-400" : "fs-12 fw-400"}>{content}</p></div>
                             }
                         </div>
                         <div className="">
-                            {link &&
-                            <Link href={link} className="">
-                                <h4 className="fs-16 fw-600 color-royalblue py-8">{link_text}</h4>
-                            </Link>}
+                            {(link && profile) &&
+                                <Link href={link} className="">
+                                    <h4 className="fs-16 fw-600 color-royalblue py-8">{link_text}</h4>
+                                </Link>}
                         </div>
                     </div>
                 }
