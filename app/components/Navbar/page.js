@@ -8,7 +8,7 @@ const listLinks = ["Financing", "Candidates", "Alumni", "Contact"]
 const MiniBar = () => {
   return (
     <div className="minibar ">
-      <p>Speak to an Admission Advisor 
+      <p>Speak to an Admission Advisor
         <Link href="/contact" style={{ textDecoration: "underline" }}>..Schedule a Call</Link>
       </p>
     </div>
@@ -35,10 +35,19 @@ const Navbar = () => {
                 }}
               />
             </Link>
-            <ul className="navbar-list" >
-              <li className="navbar-item">
-                <Link href="/courses">Courses</Link>
+
+            <ul className="navbar-list list-none" >
+
+
+              <li className="navbar-item dropdown">
+
+                <Link href="/courses" className="dropdown-btn">Courses</Link>
+
+                <div className="list-style-none bg-zinc dropdown-content rounded-4">
+                    <Link href="/courses/career/software-engineering" className="dropdown-item rounded-4">Software Engineering Career Track</Link>
+                </div>
               </li>
+
               {listLinks.map((item, index) => {
                 return (
                   <li className="navbar-item">
@@ -56,8 +65,8 @@ const Navbar = () => {
         </nav>
         <MiniBar />
 
-      </header>
-      
+      </header >
+
     </>
   );
 };

@@ -15,7 +15,7 @@ const PricingCard = ({
 
   return (
     <>
-      <div className="maxwidth-1280 rounded-8 box-shadow-v2 m-auto row border-v1 w-100">
+      <div className="maxwidth-1366 rounded-8 box-shadow-v2 m-auto row border-v1 w-100">
         <div className="pricingcard-right-side column">
           <div className="gap-24 column">
             <h3 className="fs-30 fw-800 lh-36">{data_variable?.heading}</h3>

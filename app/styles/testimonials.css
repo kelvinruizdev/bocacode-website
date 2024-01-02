@@ -1,0 +1,9 @@
+/* .testimonial-card{
+    width: 500px ;
+    height: fit-content;
+  } */
+  .slick-list-card{
+width: 100px !important;
+flex-direction: row;
+  }
+

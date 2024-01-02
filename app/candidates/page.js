@@ -5,22 +5,10 @@ import styles from '../page.module.css'
 import TitleContainer from '../components/TitleContainer/page';
 import Carousel from '../components/Carousel/page';
 import Card from '../components/Card/page';
+import data from '../data/candidates.json'
 
-
-function getData() {
-  const [data, setData] = useState({})
-
-  useEffect(() => {
-    fetch("/data/candidates.json")
-      .then(response => response.json())
-      .then(data => { setData(data) })
-  }, [])
-  return data;
-}
 
 const Candidates = () => {
-
-  const data = getData();
 
   return (
     <main className={styles.main}>
@@ -33,7 +21,7 @@ const Candidates = () => {
       />
 
       {data?.candidates && (
-        <div className='row gap-45 wrap py-30 justify-center maxwidth-1280 m-auto'>
+        <div className='row gap-45 wrap py-30 justify-center maxwidth-1366 m-auto'>
 
           {data?.candidates?.map((card, index) => {
             return (

@@ -9,19 +9,8 @@ import PricingCard from './components/PricingCard/page';
 import Credentials from './components/Credentials/page'
 import Paths from './components/Paths/page';
 import TwoColumns from './components/TwoColumns/page';
+import data from './data/home.json'
 
-
-function getData() {
-
-  const [data, setData] = useState({})
-
-  useEffect(() => {
-    fetch("/data/home.json")
-      .then(response => response.json())
-      .then(data => { setData(data) })
-  }, [])
-  return data;
-}
 
 const title_container = [
   {
@@ -40,11 +29,10 @@ const title_container = [
 
 export default function Home() {
 
-  const data = getData();
-
   return (
     <main className={styles.main}>
-      <PageHeader backgroundImage="landing-image" data={data.header} />
+
+      <PageHeader data={data?.header} />
 
       <TitleContainer 
         data={title_container[0]} 

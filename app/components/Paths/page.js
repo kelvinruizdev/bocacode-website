@@ -2,25 +2,13 @@
 import { React, useEffect, useState } from 'react'
 import Image from 'next/image'
 import '../../styles/path.css'
-
-function getData() {
-
-    const [data, setData] = useState({})
-
-    useEffect(() => {
-        fetch("/data/paths.json")
-            .then(response => response.json())
-            .then(data => { setData(data) })
-    }, [])
-    return data;
-}
+import data from '../../data/paths.json'
 
 const Paths = (props) => {
-    const data = getData();
     const { title, paths } = data;
     return (
         <>
-            <div className='maxwidth-1280 w-100 m-auto column'>
+            <div className='maxwidth-1366 w-100 m-auto column'>
 
                 <h2 className='flex justify-center fs-24 fw-700 py-30'>{title}</h2>
                 <div className='column gap-45'>

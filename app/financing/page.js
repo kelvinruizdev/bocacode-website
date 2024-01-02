@@ -4,23 +4,11 @@ import styles from '../page.module.css'
 import Link from "next/link";
 import TwoColumns from "../components/TwoColumns/page";
 import Credentials from "../components/Credentials/page";
+import data from '../data/financing.json'
 
-
-function getData() {
-
-  const [data, setData] = useState({})
-
-  useEffect(() => {
-    fetch("/data/financing.json")
-      .then(response => response.json())
-      .then(data => { setData(data) })
-  }, [])
-  return data;
-}
 
 const Financing = () => {
 
-  const data = getData();
   return (
     <main className={styles.main}>
       <TwoColumns left={data?.two_columns?.left} right={data?.two_columns?.right} />

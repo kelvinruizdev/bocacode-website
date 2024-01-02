@@ -16,8 +16,9 @@ const Side = ({
   bullets,
   steps,
   complement,
+  boxes
 }) => {
-  console.log(bullets)
+  console.log(boxes)
 
   if (image) {
     return (
@@ -76,7 +77,7 @@ const Side = ({
               const { icon, heading, content } = bullet;
               return (
                 <div className="row ">
-                  <div style={{background: `${icon.background}`}} 
+                  <div style={{ background: `${icon.background}` }}
                     className=" rounded-6 size-48 align-items-center flex justify-center">
                     <Icon icon={icon.name} width="24" />
                   </div>
@@ -142,6 +143,20 @@ const Side = ({
         </>
       )}
       {
+        Array.isArray(boxes) &&
+        <div className="row wrap gap-8">
+          {boxes.map(
+            box => {
+              return (
+                <div className="rounded-12 box p-16 gap-4 column">
+                  <h4 className="color-black">{box.heading}</h4>
+                  <p className="color-grisnoble">{box.paragraph}</p>
+                </div>)
+            }
+          )}
+        </div>
+      }
+      {
         buttons && (
           <div
             className="buttons"
@@ -170,9 +185,9 @@ const Side = ({
 const TwoColumns = ({ left, right, proportions }) => {
   return (
     <div
-      className="align-items-center gap-45 py-50 maxwidth-1280 m-auto row"
+      className="align-items-center gap-45 py-50 maxwidth-1366 m-auto row"
     >
-      <div className="flex w-50">
+      <div className="flex w-50 justify-start" >
         <Side {...left} />
       </div>
       <div className="flex w-50 justify-end">

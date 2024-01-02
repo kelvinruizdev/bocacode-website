@@ -38,6 +38,13 @@
     height: fit-content;
 }
 
+/*CARD COURSES VARIANT */
+
+.card-course-body{
+    width: 320px;
+    height: fit-content;
+}
+
 /*CARD PROFILE VARIANT */
 
 .card-profile-body{

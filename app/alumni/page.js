@@ -5,22 +5,10 @@ import styles from '../page.module.css'
 import TitleContainer from '../components/TitleContainer/page';
 import Carousel from '../components/Carousel/page';
 import Card from '../components/Card/page';
+import data from '../data/alumni.json'
 
-
-function getData() {
-  const [data, setData] = useState({})
-
-  useEffect(() => {
-    fetch("/data/alumni.json")
-      .then(response => response.json())
-      .then(data => { setData(data) })
-  }, [])
-  return data;
-}
 
 const Alumni = () => {
-
-  const data = getData();
   return (
     <main className={styles.main}>
 
@@ -41,7 +29,7 @@ const Alumni = () => {
       />
 
       {data?.alumni && (
-        <div className='row gap-80 wrap py-30 justify-center maxwidth-1280 m-auto'>
+        <div className='row gap-80 wrap py-30 justify-center maxwidth-1366 m-auto'>
 
           {data?.alumni?.map((card, index) => {
             return (

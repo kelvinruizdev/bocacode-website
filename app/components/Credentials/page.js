@@ -1,21 +1,9 @@
 
 import { React, useEffect, useState } from 'react'
 import '../../styles/credentials.css'
-
-function getData() {
-
-  const [data, setData] = useState({})
-
-  useEffect(() => {
-    fetch("/data/credentials.json")
-      .then(response => response.json())
-      .then(data => { setData(data) })
-  }, [])
-  return data;
-}
+import data from '../../data/credentials.json'
 
 const Credentials = (props) => {
-  const data = getData();
   const { credentials } = data
   return (
     <>
