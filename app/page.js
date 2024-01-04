@@ -36,7 +36,7 @@ export default function Home() {
 
       <TitleContainer 
         data={title_container[0]} 
-        classContainer="text-center w-50 py-50 m-auto gap-16"
+        classContainer="text-center w-50 py-50 m-auto gap-16 w-sm-100 container"
         classHeading="fs-36 fw-700 lh-36" 
         classParagraph="fs-16 fw-400 lh-28"
       />
@@ -45,13 +45,13 @@ export default function Home() {
 
       <TitleContainer 
         data={title_container[1]} 
-        classContainer="text-center w-50 py-30 m-auto gap-16"
+        classContainer="text-center w-50 py-30 m-auto gap-16 w-sm-100 container"
         classHeading="fs-36 fw-700 lh-36" 
         classParagraph="fs-16 fw-400 lh-28"
       />
 
       {(data?.pricing_info_variable && data?.pricing_info_static) && (
-        <div className='gap-24 column py-30'>
+        <div className='gap-24 column py-30 container'>
 
           {data?.pricing_info_variable?.map((card, index) => {
             return (
@@ -69,7 +69,7 @@ export default function Home() {
 
       <TitleContainer 
         data={title_container[0]} 
-        classContainer="text-center w-50 py-50 m-auto gap-16"
+        classContainer="text-center w-50 py-50 m-auto gap-16 w-sm-100 container"
         classHeading="fs-36 fw-700 lh-36" 
         classParagraph="fs-16 fw-400 lh-28"
       />

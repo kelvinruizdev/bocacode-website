@@ -185,7 +185,7 @@ const Side = ({
 const TwoColumns = ({ left, right, proportions }) => {
   return (
     <div
-      className="align-items-center gap-45 py-50 maxwidth-1366 m-auto row"
+      className="align-items-center gap-45 py-50 p-sm-20 p-lg-0 maxwidth-1366 m-auto row"
     >
       <div className="flex w-50 justify-start" >
         <Side {...left} />

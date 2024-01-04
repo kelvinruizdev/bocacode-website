@@ -5,9 +5,25 @@
     margin: 0 auto;
     background-size: contain;
 }
+
+
 .path-image:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+    .path-image {
+        max-width: 900px;
+        max-height: 420px;
+    }  
+}
+
+@media (max-width: 1024px) {
+    .path-image {
+        max-width: 900px;
+        max-height: 420px;
+    }  
 }
 
 
