@@ -12,9 +12,9 @@ const Footer = () => {
         <>
             <footer className="footer-container">
 
-                <div className="row maxwidth-1366 py-10 m-auto justify-beetwen align-items-center">
+                <div className="footer-first-section maxwidth-1366 py-10 m-auto justify-beetwen align-items-center">
 
-                    <Link href="#home">
+                    <Link href="/">
                         <Image
                             src="/images/bocacode.png"
                             width={200}
@@ -28,10 +28,10 @@ const Footer = () => {
                     </Link>
 
 
-                    <ul className="navbar-list" >
+                    <ul className="icon-list " >
                         {icons.map((item, index) => {
                             return (
-                                <li className="navbar-item">
+                                <li className="icon-item">
                                     <Link style={{ padding: "0 0 8px 0" }} href={""}>
                                         <Icon icon={item} width="24" style={{ margin: "0 0 0 0" }} />
                                     </Link>
