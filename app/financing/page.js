@@ -17,18 +17,13 @@ const Financing = () => {
       <TwoColumns left={data?.two_columns_2?.left} right={data?.two_columns_2?.right} />
 
       <div className="align-items-center column py-50 bg-zinc gap-45">
-        <div className="column">
-          <h1 className="text-center">{data?.info?.heading}</h1>
-          <h1 className="text-center color-blueberry">{data?.info?.call_msg}</h1>
+        <div className="column text-center px-20">
+          <h1 className="fs-36 fw-800 lh-40 fs-sm-30 ">{data?.info?.heading}</h1>
+          <h1 className="fs-36 fw-800 lh-40 fs-sm-30 color-blueberry">{data?.info?.call_msg}</h1>
         </div>
         <Link href="/" className="">
           <div
-            className="w-fit-content rounded-6 align-items-center p-12-48 fs-14 fw-500 flex"
-            style={{
-              background: `rgb(225, 29, 72)`,
-              color: `rgb(250, 250, 250)`,
-              fontSize: `16px`,
-            }}
+            className="w-fit-content rounded-6 align-items-center  button-twocolumn fs-14 fw-500 flex"
 
           >{"Schedule a Call"}</div>
         </Link>

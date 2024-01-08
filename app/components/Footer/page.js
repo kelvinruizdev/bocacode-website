@@ -45,8 +45,8 @@ const Footer = () => {
                     <p>© 2023 Boca Code. All rights reserved.</p>
 
                     <div className="row" style={{ gap: "0 20px" }}>
-                        <Link href="#home">Terms & Conditions </Link>
-                        <Link href="#home">Privacy Policy</Link>
+                        <Link href="/">Terms & Conditions </Link>
+                        <Link href="/">Privacy Policy</Link>
                     </div>
 
                 </div>

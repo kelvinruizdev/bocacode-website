@@ -1,13 +1,73 @@
-.side-container{
+.side-container {
     color: #E5E7EB;
+    width: 100%;
 }
 
-.buttons div{
-    display: flex;
+.twocolumns-container {
+    flex-direction: row;
+    padding: 60px 40px;
+}
+
+.twocolumns-heading {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #18181b;
+}
+
+.twocolumns-subheading {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 48px;
+    color: #71717a;
+}
+
+.twocolumns-content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #71717a;
+}
+
+.button-container {}
+
+.button-twocolumn {
+    background: #E11D48;
+    color: #fafafa;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 16px;
     width: fit-content;
-    border-radius: 6px;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 12px 48px;
+}
+
+.button-twocolumn:hover {
+    background: #922020;
+}
+
+
+@media screen and (width <=650px) {
+    .twocolumns-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .button-container {
+        justify-content: center;
+
+    }
+
+    .twocolumns-heading {
+        text-align: center;
+        color: #18181b;
+    }
+
+    .twocolumns-subheading {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #f4f4f5;
+    }
+
 }

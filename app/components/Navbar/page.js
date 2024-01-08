@@ -9,8 +9,8 @@ const listLinks = ["Financing", "Candidates", "Alumni", "Contact"]
 const MiniBar = () => {
   return (
     <div className="minibar ">
-      <p>Speak to an Admission Advisor
-        <Link href="/contact" style={{ textDecoration: "underline" }}>..Schedule a Call</Link>
+      <p>{"Speak to an Admission Advisor" + " " } 
+        <Link href="/contact" style={{ textDecoration: "underline" }}>Schedule a Call</Link>
       </p>
     </div>
   )
@@ -18,9 +18,6 @@ const MiniBar = () => {
 
 const Navbar = () => {
 
-  function navbarToogle() {
-
-  }
 
   return (
     <>

@@ -26,7 +26,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                     >
                         <Image
                             src={image}
-                            className=""
+                            className={carousel ? "image-brightness" : ""}
                             width={profile ? 284 : (course ? 320 : 384)}
                             height={profile ? 112 : ( course ? 160 : 224)}
                             style={{
@@ -111,14 +111,14 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                 )}
                 {(title || content) &&
                     <div className={profile ? "card-profile-content height-100 justify-beetwen column align-items-center text-center" :
-                        alumni ? "text-center pt-8" : course ? "p-16 bg-white rounded-8 box-shadow-v3" : "p-16column"}
+                        alumni ? "text-center pt-8" : course ? "p-16 bg-white rounded-8 box-shadow-v3" : "p-16 column"}
                     >
                         <div className="column gap-8">
                             {title &&
                                 <h3 className={profile ? "fs-20 fw-500 lh-28" : alumni ? "fs-18 fw-500 lh-28" : course ? "fs-20 fw-500 lh-28" : "fs-18 fw-500 lh-28"}>{title}</h3>
                             }
                             {content &&
-                                <div><p className={carousel ? "fs-14 fw-400" : course ? "fs-16 fw-300 lh-24 color-lightgray" : "fs-12 fw-400"}>{content}</p></div>
+                                <div><p className={carousel ? "fs-14 fw-400 lh-24 color-gray" : course ? "fs-16 fw-300 lh-24 color-lightgray" : "fs-12 fw-400"}>{content}</p></div>
                             }
                         </div>
                         <div className="">

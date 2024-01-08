@@ -18,7 +18,6 @@ const Side = ({
   complement,
   boxes
 }) => {
-  console.log(boxes)
 
   if (image) {
     return (
@@ -38,26 +37,29 @@ const Side = ({
 
   return (
     <div
-      className="side-container gap-16 column"
+      className="side-container gap-32 column"
     >
       {
         heading &&
         <h1
-          style={{ color: `${heading.color}`, fontSize: `${heading.font_size}`, fontWeight: `${heading.font_weight}`, lineHeight: `${heading.line_height}` }}
+          className="twocolumns-heading fs-30 fw-700 lh-36"
+          //style={{ color: `${heading.color}`, fontSize: `${heading.font_size}`, fontWeight: `${heading.font_weight}`, lineHeight: `${heading.line_height}` }}
           dangerouslySetInnerHTML={{ __html: heading.text }}
         />
       }
       {
         sub_heading &&
         <h2
-          style={{ color: `${sub_heading.color}`, fontSize: `${sub_heading.font_size}`, fontWeight: `${sub_heading.font_weight}`, lineHeight: `${sub_heading.line_height}` }}
+          className="twocolumns-subheading"
+          //style={{ color: `${sub_heading.color}`, fontSize: `${sub_heading.font_size}`, fontWeight: `${sub_heading.font_weight}`, lineHeight: `${sub_heading.line_height}` }}
           dangerouslySetInnerHTML={{ __html: sub_heading.text }}
         />
       }
       {
         content &&
         <p
-          style={{ color: `${content.color}`, fontSize: `${content.font_size}`, fontWeight: `${content.font_weight}`, lineHeight: `${content.line_height}` }}
+          className="twocolumns-content fs-16 lh-24 fw-400"
+          //style={{ color: `${content.color}`, fontSize: `${content.font_size}`, fontWeight: `${content.font_weight}`, lineHeight: `${content.line_height}` }}
           dangerouslySetInnerHTML={{ __html: content.text }}
         />
       }
@@ -77,10 +79,11 @@ const Side = ({
               const { icon, heading, content } = bullet;
               return (
                 <div className="row ">
-                  <div style={{ background: `${icon.background}` }}
-                    className=" rounded-6 size-48 align-items-center flex justify-center">
-                    <Icon icon={icon.name} width="24" />
-                  </div>
+                  <div>
+                    <div style={{ background: `${icon.background}` }}
+                      className=" rounded-6 size-48 align-items-center flex justify-center">
+                      <Icon icon={icon.name} width="24" />
+                    </div></div>
 
                   <div className="w-90 column px-16 rounded-4 ">
                     {
@@ -114,9 +117,11 @@ const Side = ({
               const { heading, content } = step;
               return (
                 <div className="row">
-                  <span
-                    className='span fs-24 fw-700 lh-36 justify-center align-center w-10'
-                  >{`${index + 1}`}</span>
+                  <div>
+                    <span
+                      className='span fs-24 fw-700 lh-36 justify-center align-center'
+                    >{`${index + 1}`}</span>
+                  </div>
                   <div style={{ background: `${step.background}` }} className="w-90 column px-16 rounded-4">
                     {
                       heading &&
@@ -159,18 +164,18 @@ const Side = ({
       {
         buttons && (
           <div
-            className="buttons"
+            className="button-container flex"
           >{
               buttons.map((button, index) => {
                 return (
                   <Link href={button.button_link}>
                     <div
-                      style={{
-                        background: `${button.button_color}`,
-                        color: `${button.button_textcolor}`,
-                        fontSize: `${button.button_fontsize}`,
-                      }}
-
+                      // style={{
+                      //   background: `${button.button_color}`,
+                      //   color: `${button.button_textcolor}`,
+                      //   fontSize: `${button.button_fontsize}`,
+                      // }}
+                      className="button-twocolumn"
                     >{button.button_text}</div>
                   </Link>
                 )
@@ -185,12 +190,12 @@ const Side = ({
 const TwoColumns = ({ left, right, proportions }) => {
   return (
     <div
-      className="align-items-center gap-45 py-50 p-sm-20 p-lg-0 maxwidth-1366 m-auto row"
+      className="align-items-center flex gap-45 maxwidth-1366 m-auto twocolumns-container"
     >
-      <div className="flex w-50 justify-start" >
+      <div className="flex justify-start side-container" >
         <Side {...left} />
       </div>
-      <div className="flex w-50 justify-end">
+      <div className="flex justify-end side-container">
         <Side {...right} />
       </div>
     </div>

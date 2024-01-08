@@ -22,7 +22,23 @@
 
 @media screen and (width < 650px) {
     .footer-first-section{
-        display: flex;
         flex-direction: column;
     }
+    .footer-first-section a{
+        margin: 0 0 20px 0;
+    }
+    .footer-second-section{
+        flex-direction: column;
+        gap: 24px;
+    }
+    .footer-second-section p{
+        padding: 16px;
+    }
 }
+
+@media screen and (width < 375px) {
+    .icon-list{
+        gap: 12px;
+    }
+}
+

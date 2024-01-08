@@ -8,7 +8,7 @@ const Credentials = (props) => {
   return (
     <>
       <div className='credentials-container row'>
-        <div className='credentials row'>
+        <div className='credentials flex'>
           {
             Array.isArray(credentials) && (
               credentials?.map((credential, index) => {

@@ -12,21 +12,6 @@ import TwoColumns from './components/TwoColumns/page';
 import data from './data/home.json'
 
 
-const title_container = [
-  {
-      "heading": "Invest",
-      "paragraph": "We believe that training is the best way to get ahead in life and in our careers. The best training helps accelerate your learning and lets you advance fast."
-  },
-  {
-      "heading": "Find Your Career Path",
-      "paragraph": "Choose the right training for your career. If you're not sure, schedule a call with an Admissions Advisor <a style='href:/contact;'> here </a>to find out which classes are right for you."
-  },
-  {
-      "heading": "Not sure where to start",
-      "paragraph": "If you're not sure which class is best for you, our <a style='href:/contact;'> admissions team </a> is ready to help."
-  }
-]
-
 export default function Home() {
 
   return (
@@ -35,23 +20,23 @@ export default function Home() {
       <PageHeader data={data?.header} />
 
       <TitleContainer 
-        data={title_container[0]} 
-        classContainer="text-center w-50 py-50 m-auto gap-16 w-sm-100 container"
-        classHeading="fs-36 fw-700 lh-36" 
-        classParagraph="fs-16 fw-400 lh-28"
+        data={data.title_container[0]}  
+        classContainer="text-center m-auto gap-16 "
+        classHeading="fs-36 fw-700 lh-36 fs-sm-30 fw-sm-700" 
+        classParagraph="fs-16 fw-400 lh-28 color-gray-v2"
       />
 
       <Carousel data={data?.carousel} />
 
       <TitleContainer 
-        data={title_container[1]} 
-        classContainer="text-center w-50 py-30 m-auto gap-16 w-sm-100 container"
-        classHeading="fs-36 fw-700 lh-36" 
-        classParagraph="fs-16 fw-400 lh-28"
+        data={data.title_container[1]} 
+        classContainer="text-center m-auto gap-16 "
+        classHeading="fs-36 fw-700 lh-36 fs-sm-30 fw-sm-700" 
+        classParagraph="fs-16 fw-400 lh-28 color-gray-v2"
       />
 
       {(data?.pricing_info_variable && data?.pricing_info_static) && (
-        <div className='gap-24 column py-30 container'>
+        <div className='gap-24 m-auto column py-30 container maxwidth-1366'>
 
           {data?.pricing_info_variable?.map((card, index) => {
             return (
@@ -65,13 +50,14 @@ export default function Home() {
 
         </div>
       )}
+
       <Credentials />
 
       <TitleContainer 
-        data={title_container[0]} 
-        classContainer="text-center w-50 py-50 m-auto gap-16 w-sm-100 container"
-        classHeading="fs-36 fw-700 lh-36" 
-        classParagraph="fs-16 fw-400 lh-28"
+        data={data.title_container[2]} 
+        classContainer="text-center m-auto gap-16 "
+        classHeading="fs-36 fw-700 lh-36 fs-sm-30 fw-sm-700" 
+        classParagraph="fs-16 fw-400 lh-28 color-gray-v2"
       />
 
       <Paths />

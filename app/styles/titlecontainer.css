@@ -1,17 +1,23 @@
 .title-container {
-    text-align: center;
     width: 50%;
-    margin: 0 auto;
-    padding: 4rem 2rem 2rem 2rem;
-    gap: 16px 0;
-}
-.title-container h1{
-    font-size: 36px;
-    font-weight: 700;
-    line-height: normal;
-    color: black;
+    padding: 50px 0px 30px 0px;
 }
 
-.title-container p{
-    line-height: 24px;
+@media screen and (width <=1366px) {
+    .title-container {
+        padding: 50px 40px 30px 40px;
+    }
+}
+
+@media screen and (width <=1024px) {
+    .title-container {
+        width: 80%;
+    }
+}
+
+@media screen and (width <=450px) {
+    .title-container {
+        width: 100%;
+        padding: 50px 20px 30px 20px;
+    }
 }

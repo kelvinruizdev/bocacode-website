@@ -1,48 +1,43 @@
 {
     "header": {
         "heading": {
-            "text": "Get the training you need to land the <p style='color: #FACC15; font-size: 48px; font-weight: 800; line-height: 48px;'>job of your dreams.</p>",
+            "text": "Get the training you need to land the",
             "color": "rgb(229, 231, 235)",
-            "font_size": "48px",
-            "font_weight": "800"
+            "extra_text":"job of your dreams."
         },
         "content": {
             "text": "Whether you're a beginner or have years of experience, we have courses to help you learn and be certified in software engineering, web development, mobile development, security, dev-ops, project management, Web3, AI, and more.",
-            "color": "rgb(229, 231, 235)",
-            "font_size": "20px",
-            "font_weight": "400",
-            "line_height":"33px"
+            "color": "rgb(229, 231, 235)"
+            
         },
         "bullets": [],
         "background_image": "/images/landing-image.jpg",
         "image": "",
-        "buttons": [
+        "button_1": 
             {
                 "button_text": "Get Started",
                 "button_link": "/",
-                "button_color": "#FACC15",
-                "button_textcolor": "#1e1b4b"
+                "button_color": "#FACC15"
             },
+        "button_2":
             {
                 "button_text": "Find a Course",
                 "button_link": "/",
-                "button_color": "#E5E7EB",
-                "button_textcolor": "#1e1b4b"
+                "button_color": "#E5E7EB"
             }
-        ]
     },
     "title_container": [
         {
-            "heading": "Invest",
+            "heading": "Invest in Yourself",
             "paragraph": "We believe that training is the best way to get ahead in life and in our careers. The best training helps accelerate your learning and lets you advance fast."
         },
         {
             "heading": "Find Your Career Path",
-            "paragraph": "Choose the right training for your career. If you're not sure, schedule a call with an Admissions Advisor <a style='href:/contact;'> here </a>to find out which classes are right for you."
+            "paragraph": "Choose the right training for your career. If you're not sure, schedule a call with an Admissions Advisor <a href='/contact' style='color: #0284c7;'> here </a> to find out which classes are right for you."
         },
         {
             "heading": "Not sure where to start",
-            "paragraph": "If you're not sure which class is best for you, our <a style='href:/contact;'> admissions team </a> is ready to help."
+            "paragraph": "If you're not sure which class is best for you, our <a href='/contact' style='color: #0284c7;'> admissions team </a> is ready to help."
         }
     ],
     "carousel": [

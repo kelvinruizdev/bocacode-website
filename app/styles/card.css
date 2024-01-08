@@ -1,29 +1,38 @@
-.card-container{
-    width: 384px;
+.card-container {
+    max-width: 384px;
     min-width: 260px;
 }
 
-.card-image{
+.card-image {
     width: 100%;
 }
 
-.card-image-carousel{
+.card-image-carousel {
     border-radius: 12px;
 }
 
-.card-image-profile{
+.image-brightness {
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
+
+.card-image-profile {
     display: flex;
     position: absolute;
 }
-.relative{
+
+.relative {
     position: relative;
 }
 
-.card-content h3{
+.card-content h3 {
     color: #18181B;
 }
 
-.card-content p{
+.card-content p {
     font-weight: normal;
     font-size: 14px;
     line-height: 23px;
@@ -31,7 +40,7 @@
 }
 
 /*CARD ALUMNI VARIANT */
-.card-alumni-body{
+.card-alumni-body {
     min-width: 130px;
     width: 140px;
     max-width: 200px;
@@ -40,39 +49,37 @@
 
 /*CARD COURSES VARIANT */
 
-.card-course-body{
+.card-course-body {
     width: 320px;
     height: fit-content;
 }
 
 /*CARD PROFILE VARIANT */
 
-.card-profile-body{
+.card-profile-body {
     width: 256px;
     height: 284px;
 }
 
-.card-profile-content{
+.card-profile-content {
     padding: 40px 16px 16px 16px;
 }
 
 
-.profile-background-image{
+.profile-background-image {
     width: 100%;
     height: 112px;
 }
 
-.centerer{
+.centerer {
     top: 14%;
     left: 28%;
 }
 
-.round{
+.round {
     border-radius: 9999px;
 }
 
-.border-royalblue{
+.border-royalblue {
     border: 1.6px solid rgb(79, 70, 229);
 }
-
-

@@ -18,9 +18,7 @@ a {
   text-decoration: none;
 }
 
-button {
-  
-}
+
 
 .buttons {
   display: flex;
@@ -553,7 +551,7 @@ button {
   display: flex;
   align-items: center;
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 8px 16px;
 }
 
 .box {
@@ -583,24 +581,39 @@ textarea {
   border: 1px solid #2563EB !important;
 }
 
+.container{
+    padding: 0px;
+}
+
 /* MEDIA QUERIES */
 
-@media screen and (width >= 1366px) {
-  
+@media screen and (width <= 1366px) {
+  .container{
+    padding: 40px;
+  }
 }
 
 @media screen and (width >= 1024px) {
+  .container{
+    
+  }
   .p-md-50 {
     padding: 50px;
   }
 }
 @media screen and (450px < width < 1024px) {
+  .container{
+    padding: 0px;
+  }
   .p-tablet  {
     padding: 0 40px;
   }
 }
 
 @media screen and (width <= 450px) {
+  .container{
+    
+  }
   .p-sm-20 {
     padding: 20px;
   }
@@ -609,6 +622,94 @@ textarea {
   }
   .m-auto{
     margin: none;
+  }
+
+
+  .fs-sm-48 {
+    font-size: 48px;
+  }
+  
+  .fs-sm-36 {
+    font-size: 36px;
+  }
+  
+  .fs-sm-30 {
+    font-size: 30px;
+  }
+  
+  .fs-sm-24 {
+    font-size: 24px;
+  }
+  
+  .fs-sm-20 {
+    font-size: 20px;
+  }
+  
+  .fs-sm-12 {
+    font-size: 12px;
+  }
+  
+  .fs-sm-18 {
+    font-size: 18px;
+  }
+  
+  .fs-sm-16 {
+    font-size: 16px;
+  }
+  
+  .fs-sm-14 {
+    font-size: 14px;
+  }
+  
+  .fw-sm-300 {
+    font-weight: 300;
+  }
+  .fw-sm-400 {
+    font-weight: 400;
+  }
+  
+  .fw-sm-500 {
+    font-weight: 500;
+  }
+  
+  .fw-sm-600 {
+    font-weight: 600;
+  }
+  
+  .fw-sm-700 {
+    font-weight: 700;
+  }
+  
+  .fw-sm-800 {
+    font-weight: 800;
+  }
+  
+  .lh-48 {
+    line-height: 48px;
+  }
+  
+  .lh-40 {
+    line-height: 40px;
+  }
+  
+  .lh-36 {
+    line-height: 36px;
+  }
+  
+  .lh-28 {
+    line-height: 28px;
+  }
+  
+  .lh-24 {
+    line-height: 24px;
+  }
+  
+  .lh-20 {
+    line-height: 20px;
+  }
+  
+  .lh-16 {
+    line-height: 16px;
   }
 }
 

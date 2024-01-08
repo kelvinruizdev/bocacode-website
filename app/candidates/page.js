@@ -15,9 +15,9 @@ const Candidates = () => {
 
       <TitleContainer 
         data={data?.title_container} 
-        classContainer="text-center py-30"
+        classContainer="text-center py-30 m-auto"
         classHeading="fs-30 fw-700 lh-36" 
-        classParagraph="fs-20 fw-400 lh-28"
+        classParagraph="fs-20 fw-400 lh-28 color-gray"
       />
 
       {data?.candidates && (
