@@ -14,22 +14,22 @@ const Alumni = () => {
 
       <TitleContainer
         data={data?.title_container}
-        classContainer="text-center py-30"
+        classContainer="text-center py-30 m-auto"
         classHeading="fs-36 fw-700 lh-40 p-16"
-        classParagraph="fs-16 fw-400 lh-24"
+        classParagraph="fs-16 fw-400 lh-24 color-gray-v2"
       />
 
       <Carousel data={data?.carousel} />
 
       <TitleContainer
         data={data?.title_container_1}
-        classContainer="text-center py-30"
+        classContainer="text-center py-30 m-auto"
         classHeading="fs-30 fw-700 lh-36 "
         classParagraph="fs-20 fw-400 lh-28"
       />
 
       {data?.alumni && (
-        <div className='row gap-80 wrap py-30 justify-center maxwidth-1366 m-auto'>
+        <div className='row gap-80 wrap p-30-20 justify-center maxwidth-1366 m-auto '>
 
           {data?.alumni?.map((card, index) => {
             return (

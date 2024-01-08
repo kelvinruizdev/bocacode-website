@@ -6,7 +6,7 @@ import Card from "../Card/page";
 
 const Carousel = ({ data }) => {
     return (
-        <div className="maxwidth-1366 m-auto py-30 gap-32 justify-center flex carousel-container">
+        <div className="maxwidth-1366 m-auto p-30-20 gap-32 justify-center flex carousel-container">
 
             {
                 data?.map((card, index) => {

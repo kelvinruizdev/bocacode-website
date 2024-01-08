@@ -5,12 +5,13 @@ import React from 'react'
 import ReactPlayer from 'react-player/youtube'
 import VideoModal from "../VideoModal/page.js";
 import '../../styles/card.css'
+import { useState } from "react";
 
 
 const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
     const { video, image, profileImage, title, content, link } = data;
 
-    const [play, setPlay] = React.useState(false);
+    const [play, setPlay] = useState(false);
 
     return (
         <>
@@ -70,7 +71,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                         </div>
                     </>
                         : (
-                            <div className="relative" onClick={() => { setPlay(true) }}>
+                            <div className="relative image-grayscale" onClick={() => { setPlay(true) }}>
                                 <Image
                                     src={image}
                                     className=""
@@ -118,7 +119,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                                 <h3 className={profile ? "fs-20 fw-500 lh-28" : alumni ? "fs-18 fw-500 lh-28" : course ? "fs-20 fw-500 lh-28" : "fs-18 fw-500 lh-28"}>{title}</h3>
                             }
                             {content &&
-                                <div><p className={carousel ? "fs-14 fw-400 lh-24 color-gray" : course ? "fs-16 fw-300 lh-24 color-lightgray" : "fs-12 fw-400"}>{content}</p></div>
+                                <div><p className={carousel ? "fs-14 fw-400 lh-24 color-gray" : course ? "fs-16 fw-300 lh-24 color-lightgray" : "fs-12 fw-400 color-lightgray"}>{content}</p></div>
                             }
                         </div>
                         <div className="">

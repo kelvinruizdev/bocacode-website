@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from 'react-player/youtube'
+import '../../styles/card.css'
 
 const VideoModal = ({ videoLink, play }) => {
     const [isModalOpen, setIsModalOpen] = useState(play);
@@ -9,7 +10,6 @@ const VideoModal = ({ videoLink, play }) => {
     const videoRef = useRef();
 
     useEffect(() => {
-
 
         if (videoRef.current) {
             videoRef.current.src = src;
@@ -37,24 +37,15 @@ const VideoModal = ({ videoLink, play }) => {
 
             <div
                 className="modal"
-                style={{
-                    //display: isModalOpen ? "flex" : "none",
-                    width: "820px",
-                    height: "460px",
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    zIndex: 1000,
-                }}
             >
                 <ReactPlayer
                     url={videoLink}
                     playing={isModalOpen}
-                    width={820}
-                    height={460}
+                    width="100%"
+                    height="100%"
                     style={{}}
                     controls
+                    className="video"
                 />
                 <img
                     src="/images/x-icon.png"

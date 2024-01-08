@@ -19,6 +19,13 @@
     }
 }
 
+.image-grayscale {
+    cursor: pointer;
+  }
+.image-grayscale:hover{
+    filter: grayscale(60%);
+}
+
 .card-image-profile {
     display: flex;
     position: absolute;
@@ -41,9 +48,7 @@
 
 /*CARD ALUMNI VARIANT */
 .card-alumni-body {
-    min-width: 130px;
     width: 140px;
-    max-width: 200px;
     height: fit-content;
 }
 
@@ -82,4 +87,14 @@
 
 .border-royalblue {
     border: 1.6px solid rgb(79, 70, 229);
+}
+
+
+
+
+
+@media screen and (width <=450px) {
+    .card-alumni-body {
+        width: 100px;
+    }
 }
