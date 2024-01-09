@@ -5,7 +5,7 @@ const UpcomingDates = ({ data }) => {
 
   return (<>
 
-    <div className="py-50">
+    <div className="py-50 p-sm-20">
       <TitleContainer
         data={data?.title_container}
         classContainer="text-center w-50  m-auto gap-16"
@@ -13,32 +13,34 @@ const UpcomingDates = ({ data }) => {
         classParagraph="fs-16 fw-400 lh-28"
       />
 
-      <div className="py-50">
-        <table className="maxwidth-1366 m-auto box-shadow-v1">
-          <tr className="border-v2">
+      <div className="py-50 overflow-x-auto">
+        <table className="maxwidth-1366 m-auto box-shadow-v2 rounded-8 ">
+          <thead className="border-v2">
             {data?.fields &&
               data?.fields.map(field =>
-                <td className=" text-center p-16 fs-14 fw-400 lh-20">{field}</td>
+                <th className=" text-center p-16 fs-14 fw-400 lh-20">{field}</th>
               )}
-          </tr>
-          <tr>
-            {data?.date_info &&
-              data?.date_info.map(info => {
-                return (<>
-                  <td className="p-12 row">
+          </thead>
+          
+          <tbody > 
+            <tr > 
+              {data?.date_info &&
+                data?.date_info.map(info => {
+                  return (<> 
+                    <td className="p-12 row column-tablet ">
+                      <div className="p-12 fs-14 fw-600 lh-20"> {info.course.title}</div>
+                      <div className="p-12">
+                        <span className="bg-light-gray rounded-16 p-4-12 fs-12 fw-600 lh-16 color-lightgray">{info.course.modality}</span>
+                      </div>
+                    </td>
+                    <td className="p-12 fs-14 fw-400 lh-20 text-center color-lightgray">{info.start_date.date}</td>
+                    <td className="p-12 fs-14 fw-400 lh-20 text-center color-lightgray">{info.graduation.date}</td>
+                    <td className="p-12 text-center"><Link href={info.apply.link} className="fs-14 fw-700 lh-20 color-royalblue">{info.apply.text}</Link></td>
 
-                    <div className="p-12 fs-14 fw-600 lh-20">{info.course.title}</div>
-                    <div className="p-12">
-                      <span className="bg-light-gray rounded-16 p-4-12 fs-12 fw-600 lh-16 color-lightgray">{info.course.modality}</span>
-                    </div>
-                  </td>
-                  <td className="p-12 fs-14 fw-400 lh-20 text-center color-lightgray">{info.start_date.date}</td>
-                  <td className="p-12 fs-14 fw-400 lh-20 text-center color-lightgray">{info.graduation.date}</td>
-                  <td className="p-12 text-center"><Link href={info.apply.link} className="fs-14 fw-700 lh-20 color-royalblue">{info.apply.text}</Link></td>
-              
-                </>)
-              })}
-          </tr>
+                  </>)
+                })}
+            </tr>
+          </tbody>
         </table>
       </div>
 
