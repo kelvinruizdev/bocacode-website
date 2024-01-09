@@ -421,7 +421,7 @@
             },
             "buttons": [
                 {
-                    "button_text": "Schedule a Call",
+                    "button_text": "Talk to an Advisor",
                     "button_link": "/",
                     "button_color": "rgb(225, 29, 72)",
                     "button_textcolor": "rgb(250, 250, 250)",

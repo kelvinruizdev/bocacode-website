@@ -5,7 +5,7 @@
 
 .twocolumns-container {
     flex-direction: row;
-    padding: 60px 40px;
+    padding: 60px 0px;
 }
 
 .twocolumns-heading {
@@ -43,6 +43,12 @@
 
 .button-twocolumn:hover {
     background: #922020;
+}
+
+@media screen and (width <=1366px) {
+    .twocolumns-container {
+        padding: 60px 40px;
+    }
 }
 
 

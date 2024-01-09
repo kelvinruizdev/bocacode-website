@@ -83,7 +83,7 @@ const SoftwareEngineering = () => {
       </div>
       <TwoColumns left={data?.two_columns_2?.left} right={data?.two_columns_2?.right} />
 
-      {/* <Testimonials/> */}
+      <Testimonials/>
 
       <TitleContainer
         data={data?.title_container_3}
@@ -93,7 +93,7 @@ const SoftwareEngineering = () => {
       />
 
       {data?.qualities && (
-        <div className='container row gap-45 wrap py-30 justify-center maxwidth-1366 m-auto justify-beetwen'>
+        <div className='container row gap-45 wrap py-30 maxwidth-1366 m-auto justify-beetwen justify-center-sm '>
 
           {data?.qualities?.map((qualitie, index) => {
             return (
