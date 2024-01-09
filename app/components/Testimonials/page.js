@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import React, { useState, useRef } from "react";
 import TitleContainer from "../TitleContainer/page";

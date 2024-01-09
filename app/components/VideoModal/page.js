@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from 'react-player/youtube'
 import '../../styles/card.css'
