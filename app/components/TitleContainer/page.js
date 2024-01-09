@@ -1,4 +1,4 @@
-
+'use client';
 import Image from "next/image";
 import '../../styles/titlecontainer.css'
 import TwoColumns from '../TwoColumns/page'

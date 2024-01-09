@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import Icon from "../Icon/pages";
 import Image from "next/image";

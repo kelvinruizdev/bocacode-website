@@ -1,4 +1,4 @@
-
+'use client';
 import { React, useEffect, useState } from 'react'
 import '../../styles/credentials.css'
 import data from '../../data/credentials.json'

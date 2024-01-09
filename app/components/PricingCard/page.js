@@ -1,3 +1,4 @@
+'use client';
 import Icon from "../Icon/set/check";
 import '../../styles/pricingcard.css'
 import Link from "next/link";

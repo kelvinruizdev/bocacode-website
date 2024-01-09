@@ -1,4 +1,4 @@
-
+'use client';
 import Image from "next/image";
 import '../../styles/pageheader.css'
 import Link from "next/link";
