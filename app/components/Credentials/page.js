@@ -13,7 +13,7 @@ const Credentials = (props) => {
             Array.isArray(credentials) && (
               credentials?.map((credential, index) => {
                 return(
-                <div className='column'>
+                <div className='column' key={index}>
                   <h1>{credential?.heading}</h1>
                   <p>{credential?.sub_heading}</p>
                 </div>)

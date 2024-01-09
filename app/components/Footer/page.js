@@ -32,7 +32,7 @@ const Footer = () => {
                     <ul className="icon-list " >
                         {icons.map((item, index) => {
                             return (
-                                <li className="icon-item">
+                                <li className="icon-item" key={index}>
                                     <Link style={{ padding: "0 0 8px 0" }} href={""}>
                                         <Icon icon={item} width="24" style={{ margin: "0 0 0 0" }} />
                                     </Link>

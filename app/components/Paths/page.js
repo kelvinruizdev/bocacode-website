@@ -15,7 +15,7 @@ const Paths = (props) => {
                     {
                         Array.isArray(paths) && (
                             paths?.map((path, index) => {
-                                return (<div>
+                                return (<div key={index}>
                                     <div className='gap-16 row path'>
                                         <div>
                                             <span

@@ -55,7 +55,7 @@ const Navbar = () => {
 
               {listLinks.map((item, index) => {
                 return (
-                  <li className="navbar-item">
+                  <li className="navbar-item" key={index}>
                     <Link style={{ padding: "0 0 8px 0" }} className="navbar-link" href={"/"+item.toLowerCase()}>{item}</Link>
                   </li>
                 )

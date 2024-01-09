@@ -18,7 +18,7 @@ const UpcomingDates = ({ data }) => {
         <table className="maxwidth-1366 m-auto box-shadow-v2 rounded-8 ">
           <thead className="border-v2">
             {data?.fields &&
-              data?.fields.map(field =>
+              data?.fields.map(field =>        
                 <th className=" text-center p-16 fs-14 fw-400 lh-20">{field}</th>
               )}
           </thead>
