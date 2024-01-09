@@ -15,21 +15,20 @@ const PageHeader = ({ children, backgroundImage, data }) => {
                 className="pageheader-container "
                 style={{
                     backgroundImage: `url(${data?.background_image})`,
-
                 }}
             >
                 <div className="pageheader-container-layer">
-                    <div className="flex column pageheader-content">
+                    <div className="flex column pageheader-content maxwidth-1366">
                         {
                             heading &&
-                            <div>
+                            <div className="w-50 w-100-tablet">
                                 <h1
-                                    className="pageheader-heading"
+                                    className="fs-48 fw-800 lh-48 fs-tablet-30 lh-tablet-36 color-white-v2"
                                     //style={{ color: `${heading.color}`, fontSize: `${heading.font_size}`, fontWeight: `${heading.font_weight}`, lineHeight: `${heading.line_height}` }}
                                     dangerouslySetInnerHTML={{ __html: heading.text }}
                                 />
                                 <h1
-                                    className="pageheader-heading-extra"
+                                    className="fs-48 fw-800 lh-48 fs-tablet-30 lh-tablet-36 color-yellow"
                                     //style={{ color: `${heading.color}`, fontSize: `${heading.font_size}`, fontWeight: `${heading.font_weight}`, lineHeight: `${heading.line_height}` }}
                                     dangerouslySetInnerHTML={{ __html: heading.extra_text }}
                                 />
@@ -38,7 +37,7 @@ const PageHeader = ({ children, backgroundImage, data }) => {
                         {
                             sub_heading &&
                             <h2
-                                className="pageheader-subheading"
+                                className=" w-50 w-100-tablet"
                                 //style={{ color: `${sub_heading.color}`, fontSize: `${sub_heading.font_size}`, fontWeight: `${sub_heading.font_weight}`, lineHeight: `${sub_heading.line_height}` }}
                                 dangerouslySetInnerHTML={{ __html: sub_heading.text }}
                             />
@@ -46,7 +45,7 @@ const PageHeader = ({ children, backgroundImage, data }) => {
                         {
                             content &&
                             <p
-                                className="pageheader-paragraph"
+                                className="fs-20 fw-400 lh-28 fs-tablet-16 w-50 w-100-tablet color-white-v2"
                                 //style={{ color: `${content.color}`, fontSize: `${content.font_size}`, fontWeight: `${content.font_weight}`, lineHeight: `${content.line_height}` }}
                                 dangerouslySetInnerHTML={{ __html: content.text }}
                             />
@@ -54,12 +53,13 @@ const PageHeader = ({ children, backgroundImage, data }) => {
                         {
                             button_1 && (
                                 <div
-                                    className="buttons-container text-center flex"
+                                    className="buttons-container text-center flex w-50 w-100-tablet" 
                                 >
                                     <Link href={button_1.button_link}>
                                         <div
                                             style={{
-                                                background: `${button_1.button_color}`
+                                                background: `${button_1.button_color}`,
+                                                color: `${button_1.button_textcolor}`
                                             }}
                                             className="pageheader-button_1 rounded-4"
                                         >{button_1.button_text}</div>

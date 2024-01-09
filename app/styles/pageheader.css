@@ -10,6 +10,7 @@
 
 .pageheader-container-layer {
     background-image: linear-gradient(to right, rgba(30, 27, 75, .75), transparent);  
+    width: 100%;
 }
 
 .pageheader-container-layer2 {
@@ -17,23 +18,11 @@
 }
 
 .pageheader-content {
-    width: 70%;
     gap: 16px;
+    padding: 128px 40px;
+    margin: 0 auto;
 }
 
-.pageheader-heading {
-    color: #f4f4f5;
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 48px;
-}
-
-.pageheader-heading-extra {
-    color: #FACC15;
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 48px;
-}
 
 .pageheader-paragraph {
     color: #f4f4f5;
@@ -71,6 +60,7 @@
 @media screen and (width <=1366px) {
     .pageheader-content {
         padding: 128px 40px;
+        margin: 0;
     }
 }
 
@@ -83,21 +73,6 @@
     .pageheader-container-layer{
         background-image: none;
         background-color: rgba(30, 27, 75, .75);
-    }
-
-    .pageheader-heading {
-        font-size: 30px;
-        line-height: 36px;
-    }
-
-    .pageheader-heading-extra {
-        font-size: 30px;
-        line-height: 36px;
-    }
-
-    .pageheader-paragraph {
-        font-size: 16px;
-        line-height: 24px;
     }
 
     .buttons-container {

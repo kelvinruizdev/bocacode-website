@@ -423,6 +423,14 @@ td {
 }
 
 /*TEXT COLORS*/
+.color-white-v2{
+  color: #f4f4f5;
+}
+
+.color-yellow{
+  color: #FACC15;
+}
+
 .color-royalblue {
   color: rgb(79, 70, 229);
 }
@@ -661,7 +669,7 @@ textarea {
 }
 
 .container {
-  padding: 0px;
+  padding: 40px 0px;
 }
 
 /* MEDIA QUERIES */
@@ -676,6 +684,8 @@ textarea {
   .box {
     width: 99%;
   }
+
+  
 }
 
 @media screen and (width <=750px) {
@@ -690,6 +700,19 @@ textarea {
   .grid-col-tablet-2 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .fs-tablet-30{
+    font-size: 30px;
+  }
+
+  .fs-tablet-16{
+    font-size: 16px;
+  }
+
+  .lh-tablet-36{
+    line-height: 36px;
+  }
+
 }
 
 @media screen and (width <=450px) {
@@ -814,9 +837,7 @@ textarea {
     line-height: 40px;
   }
 
-  .lh-36 {
-    line-height: 36px;
-  }
+  
 
   .lh-28 {
     line-height: 28px;

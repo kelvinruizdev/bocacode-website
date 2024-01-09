@@ -17,14 +17,13 @@
         "bullets": [],
         "background_image": "/images/veronie-wide.jpg",
         "image": "",
-        "buttons": [
+        "button_1": 
             {
                 "button_text": "Find a Course",
                 "button_link": "/",
                 "button_color": "#E11D48",
-                "button_textcolor": "#FFFBDA"
+                "button_textcolor": "white"
             }
-        ]
     },
     "upcoming_dates": {
         "title_container":{
