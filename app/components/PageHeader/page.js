@@ -26,12 +26,12 @@ const PageHeader = ({ children, backgroundImage, data }) => {
                                 <h1
                                     className="fs-48 fw-800 lh-48 fs-tablet-30 lh-tablet-36 color-white-v2"
                                     //style={{ color: `${heading.color}`, fontSize: `${heading.font_size}`, fontWeight: `${heading.font_weight}`, lineHeight: `${heading.line_height}` }}
-                                    dangerouslySetInnerHTML={{ __html: heading.text }}
+                                    dangerouslySetInnerHTML={{ __html: data?.heading.text }}
                                 />
                                 <h1
                                     className="fs-48 fw-800 lh-48 fs-tablet-30 lh-tablet-36 color-yellow"
                                     //style={{ color: `${heading.color}`, fontSize: `${heading.font_size}`, fontWeight: `${heading.font_weight}`, lineHeight: `${heading.line_height}` }}
-                                    dangerouslySetInnerHTML={{ __html: heading.extra_text }}
+                                    dangerouslySetInnerHTML={{ __html: data?.heading.extra_text }}
                                 />
                             </div>
                         }
