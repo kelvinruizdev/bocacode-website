@@ -31,6 +31,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                             width={profile ? 284 : (course ? 320 : 384)}
                             height={profile ? 112 : ( course ? 160 : 224)}
                             style={{
+                                objectFit:"cover",
                                 borderRadius: `${profile ? "16px 16px 0 0" : course ? "8px 8px 0 0" :"12px"}`,
                                 width: "100%"
                             }}

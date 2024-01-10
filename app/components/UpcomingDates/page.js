@@ -1,6 +1,7 @@
 'use client';
 import Link from "next/link";
 import TitleContainer from "../TitleContainer/page";
+import { Fragment } from "react";
 
 const UpcomingDates = ({ data }) => {
 
@@ -18,16 +19,16 @@ const UpcomingDates = ({ data }) => {
         <table className="maxwidth-1366 m-auto box-shadow-v2 rounded-8 ">
           <thead className="border-v2">
             {data?.fields &&
-              data?.fields.map(field =>        
-                <th className=" text-center p-16 fs-14 fw-400 lh-20">{field}</th>
+              data?.fields.map((field, index) =>        
+                <th className=" text-center p-16 fs-14 fw-400 lh-20" key={index}>{field}</th>
               )}
           </thead>
           
           <tbody > 
             <tr > 
               {data?.date_info &&
-                data?.date_info.map(info => {
-                  return (<> 
+                data?.date_info.map((info, index) => {
+                  return (<Fragment key={index} > 
                     <td className="p-12 row column-tablet ">
                       <div className="p-12 fs-14 fw-600 lh-20"> {info.course.title}</div>
                       <div className="p-12">
@@ -38,7 +39,7 @@ const UpcomingDates = ({ data }) => {
                     <td className="p-12 fs-14 fw-400 lh-20 text-center color-lightgray">{info.graduation.date}</td>
                     <td className="p-12 text-center"><Link href={info.apply.link} className="fs-14 fw-700 lh-20 color-royalblue">{info.apply.text}</Link></td>
 
-                  </>)
+                  </Fragment>)
                 })}
             </tr>
           </tbody>

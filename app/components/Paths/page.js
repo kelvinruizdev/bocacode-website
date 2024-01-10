@@ -34,7 +34,7 @@ const Paths = (props) => {
                                                     {
                                                         path?.careers.map((career, index) => {
                                                             return (
-                                                                <li className='fs-14 fw-400 lh-24'>{career}</li>
+                                                                <li className='fs-14 fw-400 lh-24' key={index}>{career}</li>
                                                             )
                                                         })
                                                     }

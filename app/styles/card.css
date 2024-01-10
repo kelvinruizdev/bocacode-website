@@ -55,7 +55,8 @@
 /*CARD COURSES VARIANT */
 
 .card-course-body {
-    width: 320px;
+    min-width: 250px;
+    max-width: 320px;
     height: fit-content;
 }
 
