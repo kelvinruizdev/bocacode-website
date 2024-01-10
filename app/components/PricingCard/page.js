@@ -5,13 +5,7 @@ import Link from "next/link";
 
 const PricingCard = ({
   data_variable,
-  data_static,
-  info,
-  selectedPlan,
-  setSelectedPlan,
-  buttonText,
-  jobGuarantee,
-  index,
+  data_static
 }) => {
 
   return (

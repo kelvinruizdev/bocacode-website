@@ -36,7 +36,7 @@ const Alumni = () => {
               <Card
                 key={index}
                 data={card}
-                link_text={data?.link_text}
+                link_text={card?.link}
                 alumni
               />
             )

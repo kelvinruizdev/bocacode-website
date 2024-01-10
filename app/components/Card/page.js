@@ -18,7 +18,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
             <div className={profile ? "card-profile-body box-shadow-v1 rounded-16 column relative"
                 : alumni ? "card-alumni-body column align-center" : course ? "card-course-body" : "card-container"}
             >
-                {(data?.image && !video) &&
+                {(data?.image && !data?.video) &&
                     <div
                         className=""
                         style={{
