@@ -15,6 +15,7 @@ const PageHeader = ({ children, backgroundImage, data }) => {
                 className="pageheader-container "
                 style={{
                     backgroundImage: `url(${data?.background_image})`,
+                    backgroundPosition: "top"
                 }}
             >
                 <div className="pageheader-container-layer">

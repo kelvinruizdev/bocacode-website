@@ -79,7 +79,7 @@ const Side = ({
             bullets?.map((bullet, index) => {
               const { icon, heading, content } = bullet;
               return (
-                <div className="row ">
+                <div className="row " key={index}>
                   <div>
                     <div style={{ background: `${icon.background}` }}
                       className=" rounded-6 size-48 align-items-center flex justify-center">
@@ -117,7 +117,7 @@ const Side = ({
             steps.map((step, index) => {
               const { heading, content } = step;
               return (
-                <div className="row">
+                <div className="row" key={index}>
                   <div>
                     <span
                       className='span fs-24 fw-700 lh-36 justify-center align-center'
@@ -152,9 +152,9 @@ const Side = ({
         Array.isArray(boxes) &&
         <div className="row wrap gap-8">
           {boxes.map(
-            box => {
+            (box, index) => {
               return (
-                <div className="rounded-12 box p-16 gap-4 column">
+                <div className="rounded-12 box p-16 gap-4 column" key={index}>
                   <h4 className="color-black">{box.heading}</h4>
                   <p className="color-grisnoble">{box.paragraph}</p>
                 </div>)
@@ -169,7 +169,7 @@ const Side = ({
           >{
               buttons.map((button, index) => {
                 return (
-                  <Link href={button.button_link}>
+                  <Link href={button.button_link} key={index}>
                     <div
                       // style={{
                       //   background: `${button.button_color}`,
