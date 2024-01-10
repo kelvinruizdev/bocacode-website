@@ -11,21 +11,6 @@
     border-radius: 12px;
 }
 
-.image-brightness {
-    cursor: pointer;
-
-    &:hover {
-        filter: brightness(1.1);
-    }
-}
-
-.image-grayscale {
-    cursor: pointer;
-  }
-.image-grayscale:hover{
-    filter: grayscale(60%);
-}
-
 .card-image-profile {
     display: flex;
     position: absolute;

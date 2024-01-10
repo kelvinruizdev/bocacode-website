@@ -47,6 +47,21 @@ td {
   border: none;
 }
 
+.image-brightness {
+  cursor: pointer;
+
+  &:hover {
+      filter: brightness(1.1);
+  }
+}
+
+.image-grayscale {
+  cursor: pointer;
+  &:hover {
+      filter: grayscale(60%);
+  }
+}
+
 /*OVERFLOW*/
 .overflow-x-auto {
   overflow-x: auto !important;

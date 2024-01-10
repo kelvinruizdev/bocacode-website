@@ -5,7 +5,14 @@ import Image from "next/image";
 import Icon from "../Icon/pages";
 import '../../styles/footer.css'
 
-const icons = ["medium-blog", "youtube", "linkedin", "facebook", "instagram", "x", "github"]
+const icons = [{ icon: "medium-blog", link: "https://medium.com/boca-code" },
+{ icon: "youtube", link: "https://www.youtube.com/@BocaCode" },
+{ icon: "linkedin", link: "https://www.linkedin.com/school/boca-code/" },
+{ icon: "facebook", link: "https://www.facebook.com/bocacode/" },
+{ icon: "instagram", link: "https://www.instagram.com/boca.code/" },
+{ icon: "x", link: "https://twitter.com/bocacode" },
+{ icon: "github", link: "https://github.com/bocacode" }
+]
 // const icons = ["medium-blog", "youtube", "linkedin"]
 
 const Footer = () => {
@@ -33,8 +40,8 @@ const Footer = () => {
                         {icons.map((item, index) => {
                             return (
                                 <li className="icon-item" key={index}>
-                                    <Link style={{ padding: "0 0 8px 0" }} href={""}>
-                                        <Icon icon={item} width="24" style={{ margin: "0 0 0 0" }} />
+                                    <Link style={{ padding: "0 0 8px 0" }} href={item.link}>
+                                        <Icon icon={item.icon} width="24" style={{ margin: "0 0 0 0" }} className="" />
                                     </Link>
                                 </li>
                             )
@@ -43,7 +50,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="row fs-12 footer-second-section maxwidth-1366 py-10 m-auto justify-beetwen align-items-center">
-                    <p>© 2023 Boca Code. All rights reserved.</p>
+                    <p>© 2024 Boca Code. All rights reserved.</p>
 
                     <div className="row" style={{ gap: "0 20px" }}>
                         <Link href="/">Terms & Conditions </Link>

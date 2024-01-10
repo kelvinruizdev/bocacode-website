@@ -71,8 +71,8 @@ const SoftwareEngineering = () => {
             <p className='fs-18 fw-400 lh-24 color-gray'>{data?.what_learn?.text}</p>
           </div>
           <div className='grid container grid-col-3 w-100 w-100-tablet gap-24 grid-col-sm-1 grid-col-tablet-2'>
-            {data?.what_learn?.items.map(item =>
-              <div className='row gap-8 color-gray'>
+            {data?.what_learn?.items.map((item, index) =>
+              <div className='row gap-8 color-gray' key={index}>
                 <div>
                   <Icon icon={data?.what_learn?.icon} width="20px" />
                 </div>
