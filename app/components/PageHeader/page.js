@@ -40,7 +40,7 @@ const PageHeader = ({ children, backgroundImage, data }) => {
                             <h2
                                 className=" w-50 w-100-tablet"
                                 //style={{ color: `${sub_heading.color}`, fontSize: `${sub_heading.font_size}`, fontWeight: `${sub_heading.font_weight}`, lineHeight: `${sub_heading.line_height}` }}
-                                dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+                                dangerouslySetInnerHTML={{ __html: data?.sub_heading.text }}
                             />
                         }
                         {
@@ -48,7 +48,7 @@ const PageHeader = ({ children, backgroundImage, data }) => {
                             <p
                                 className="fs-20 fw-400 lh-28 fs-tablet-16 w-50 w-100-tablet color-white-v2"
                                 //style={{ color: `${content.color}`, fontSize: `${content.font_size}`, fontWeight: `${content.font_weight}`, lineHeight: `${content.line_height}` }}
-                                dangerouslySetInnerHTML={{ __html: content.text }}
+                                dangerouslySetInnerHTML={{ __html: data?.content.text }}
                             />
                         }
                         {

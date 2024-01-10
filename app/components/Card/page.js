@@ -9,7 +9,7 @@ import { useState } from "react";
 
 
 const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
-    const { video, image, profileImage, title, content, link } = data;
+    // const { video, image, profileImage, title, content, link } = data;
 
     const [play, setPlay] = useState(false);
 
@@ -18,7 +18,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
             <div className={profile ? "card-profile-body box-shadow-v1 rounded-16 column relative"
                 : alumni ? "card-alumni-body column align-center" : course ? "card-course-body" : "card-container"}
             >
-                {(image && !video) &&
+                {data?.(image && !video) &&
                     <div
                         className=""
                         style={{
@@ -26,7 +26,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                         }}
                     >
                         <Image
-                            src={image}
+                            src={data?.image}
                             className={carousel ? "image-brightness" : ""}
                             width={profile ? 284 : (course ? 320 : 384)}
                             height={profile ? 112 : ( course ? 160 : 224)}
@@ -38,7 +38,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                         />
                     </div>
                 }
-                {(video) &&
+                {(data?.video) &&
                     <div
                         className=""
                         style={{
@@ -47,7 +47,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                     >{play ? 
                     <>
                         <VideoModal
-                            videoLink={video}
+                            videoLink={data?.video}
                             play
                         />
                         <div className="relative" onClick={() => { setPlay(true) }}>
@@ -74,7 +74,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                         : (
                             <div className="relative image-grayscale" onClick={() => { setPlay(true) }}>
                                 <Image
-                                    src={image}
+                                    src={data?.image}
                                     className=""
                                     width={profile ? 284 : 384}
                                     height={profile ? 112 : 224}
@@ -96,13 +96,13 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                         }
                     </div>
                 }
-                {profileImage && (
+                {data?.profileImage && (
                     <div
                         className={profile ? "absolute centerer" : "flex justify-content-center"}
                     >
-                        <Link href={alumni ? link.toLowerCase() : ""} className="">
+                        <Link href={alumni ? data?.link.toLowerCase() : ""} className="">
                             <Image
-                                src={profileImage}
+                                src={data?.profileImage}
                                 className="border-royalblue round"
                                 width={profile ? 108 : 80}
                                 height={profile ? 108 : 80}
@@ -111,22 +111,22 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                         </Link>
                     </div>
                 )}
-                {(title || content) &&
+                {(data?.title || data?.content) &&
                     <div className={profile ? "card-profile-content height-100 justify-beetwen column align-items-center text-center" :
                         alumni ? "text-center pt-8" : course ? "p-16 bg-white rounded-8 box-shadow-v3" : "p-16 column"}
                     >
                         <div className="column gap-8">
-                            {title &&
-                                <h3 className={profile ? "fs-20 fw-500 lh-28" : alumni ? "fs-18 fw-500 lh-28" : course ? "fs-20 fw-500 lh-28" : "fs-18 fw-500 lh-28"}>{title}</h3>
+                            {data?.title &&
+                                <h3 className={profile ? "fs-20 fw-500 lh-28" : alumni ? "fs-18 fw-500 lh-28" : course ? "fs-20 fw-500 lh-28" : "fs-18 fw-500 lh-28"}>{data?.title}</h3>
                             }
-                            {content &&
-                                <div><p className={carousel ? "fs-14 fw-400 lh-24 color-gray" : course ? "fs-16 fw-300 lh-24 color-lightgray" : "fs-12 fw-400 color-lightgray"}>{content}</p></div>
+                            {data?.content &&
+                                <div><p className={carousel ? "fs-14 fw-400 lh-24 color-gray" : course ? "fs-16 fw-300 lh-24 color-lightgray" : "fs-12 fw-400 color-lightgray"}>{data?.content}</p></div>
                             }
                         </div>
                         <div className="">
-                            {(link && profile) &&
-                                <Link href={link} className="">
-                                    <h4 className="fs-16 fw-600 color-royalblue py-8">{link_text}</h4>
+                            {(data?.link && data?.profile) &&
+                                <Link href={data?.link} className="">
+                                    <h4 className="fs-16 fw-600 color-royalblue py-8">{data?.link_text}</h4>
                                 </Link>}
                         </div>
                     </div>
