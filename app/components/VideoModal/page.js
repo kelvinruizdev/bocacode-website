@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from 'react-player/youtube'
+import Image from "next/image";
 import '../../styles/card.css'
 
 const VideoModal = ({ videoLink, play }) => {
@@ -48,7 +49,7 @@ const VideoModal = ({ videoLink, play }) => {
                     controls
                     className="video"
                 />
-                <img
+                <Image
                     src="/images/x-icon.png"
                     onClick={() => handleClose()}
                     width={35}
@@ -57,7 +58,7 @@ const VideoModal = ({ videoLink, play }) => {
                         position: "absolute",
                         margin: "0px 0px 0px 10px",
                         top: "0%",
-                        right: "-6%"
+                        right: "0%"
                     }}
                 />
             </div>

@@ -52,7 +52,7 @@ const Card = ({ data, carousel, link_text, profile, alumni, course }) => {
                         />
                         <div className="relative" onClick={() => { setPlay(true) }}>
                             <Image
-                                src={image}
+                                src={data?.image}
                                 className=""
                                 width={profile ? 284 : 384}
                                 height={profile ? 112 : 224}
