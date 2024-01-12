@@ -11,7 +11,7 @@ const PageHeader = ({ children, backgroundImage, data }) => {
 
     return (
         <>
-            <div
+            <section
                 className="pageheader-container "
                 style={{
                     backgroundImage: `url(${data?.background_image})`,
@@ -81,7 +81,7 @@ const PageHeader = ({ children, backgroundImage, data }) => {
                         }
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     );
 };

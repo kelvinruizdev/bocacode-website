@@ -8,7 +8,7 @@ const Paths = (props) => {
     const { title, paths } = data;
     return (
         <>
-            <div className='maxwidth-1366 w-100 m-auto column path-container'>
+            <div className='maxwidth-1366 w-100 m-auto column container'>
 
                 <h2 className='flex justify-center fs-24 fw-700 py-30'>{title}</h2>
                 <div className='column gap-45'>

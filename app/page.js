@@ -14,6 +14,8 @@ import data from './data/home.json'
 
 export default function Home() {
 
+  console.log(data?.pricing_info_variable)
+
   return (
     <main className={styles.main}>
 
@@ -35,15 +37,14 @@ export default function Home() {
         classParagraph="fs-16 fw-400 lh-28 color-gray-v2"
       />
 
-      {(data?.pricing_info_variable && data?.pricing_info_static) && (
+      {(data?.pricing_info_variable) && (
         <div className='gap-24 m-auto column py-30 container maxwidth-1366'>
 
           {data?.pricing_info_variable?.map((card, index) => {
             return (
               <PricingCard
                 key={index}
-                data_variable={card}
-                data_static={data?.pricing_info_static}
+                data={card}
               />
             )
           })}

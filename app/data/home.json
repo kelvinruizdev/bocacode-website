@@ -146,18 +146,6 @@
             "finance_msg": "Finance for as little as 0% for 3 months"
         }
     ],
-    "pricing_info_static": {
-        "about": "ABOUT THE CLASS",
-        "icon": "check",
-        "just": "Just",
-        "price": "$500 down",
-        "button": {
-            "button_text": "Learn More",
-            "button_link": "/",
-            "button_color": "#312E81",
-            "button_textcolor": "#e5e7eb"
-        }
-    },
     "two_columns": {
         "left": {
             "heading": {

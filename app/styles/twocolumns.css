@@ -70,10 +70,15 @@
     }
 
     .twocolumns-subheading {
+        text-align: center;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
         color: #f4f4f5;
+    }
+
+    .twocolumns-content {
+        text-align: center;
     }
 
 }
