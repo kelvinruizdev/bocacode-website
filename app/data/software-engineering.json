@@ -19,8 +19,8 @@
         "image": "",
         "button_1": 
             {
-                "button_text": "Find a Course",
-                "button_link": "/",
+                "button_text": "Apply now",
+                "button_link": "/contact",
                 "button_color": "#E11D48",
                 "button_textcolor": "white"
             }
@@ -299,7 +299,7 @@
                         "font_size": "20px"
                     },
                     "content": {
-                        "text": "Boca Code offers 6, 12, and 24 month loans with 0% interest. Our loans are managed through our partner Mia-Share. <a href='/' style='color:rgb(79, 70, 229); font-weight:700;'> Apply here </a> to see if you qualify.",
+                        "text": "Boca Code offers 6, 12, and 24 month loans with 0% interest. Our loans are managed through our partner Mia-Share. <a href='/https://bocacode.mia-share.com/apply/programs' style='color:rgb(79, 70, 229); font-weight:700;'> Apply here </a> to see if you qualify.",
                         "color": "rgb(113, 113, 122)",
                         "font_size": "16px",
                         "font_weight": "400",
@@ -314,7 +314,7 @@
                         "font_size": "20px"
                     },
                     "content": {
-                        "text": "Meritize offers loans up to 60 months with no payments for 6 months for as low as 5%. <a href='/' style='color:rgb(79, 70, 229); font-weight:700;'> Apply here. </a> Climb offers similar terms up to 60 months with no payments for 6 months. <a href='/' style='color:rgb(79, 70, 229); font-weight:700;'> Apply here. </a>",
+                        "text": "Meritize offers loans up to 60 months with no payments for 6 months for as low as 5%. <a href='/https://apply.meritize.com/' style='color:rgb(79, 70, 229); font-weight:700;'> Apply here. </a> Climb offers similar terms up to 60 months with no payments for 6 months. <a href='/https://climbcredit.com/apply/bocacode?page=create-account' style='color:rgb(79, 70, 229); font-weight:700;'> Apply here. </a>",
                         "color": "rgb(113, 113, 122)",
                         "font_size": "16px",
                         "font_weight": "400",
@@ -329,7 +329,7 @@
                         "font_size": "20px"
                     },
                     "content": {
-                        "text": "Our partner, Mia-Share, offers the best-in-class ISA terms. You put $500 down and pay nothing until you get a job making at least $36,000. Then you pay 8% of your salary for a maximum of 68 months.  <a href='/' style='color:rgb(79, 70, 229); font-weight:700;'> Apply here. </a>",
+                        "text": "Our partner, Mia-Share, offers the best-in-class ISA terms. You put $500 down and pay nothing until you get a job making at least $36,000. Then you pay 8% of your salary for a maximum of 68 months.  <a href='/https://bocacode.mia-share.com/apply/programs' style='color:rgb(79, 70, 229); font-weight:700;'> Apply here. </a>",
                         "color": "rgb(113, 113, 122)",
                         "font_size": "16px",
                         "font_weight": "400",
@@ -421,7 +421,7 @@
             "buttons": [
                 {
                     "button_text": "Talk to an Advisor",
-                    "button_link": "/",
+                    "button_link": "/contact",
                     "button_color": "rgb(225, 29, 72)",
                     "button_textcolor": "rgb(250, 250, 250)",
                     "button_fontsize": "16px"

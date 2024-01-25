@@ -21,7 +21,7 @@ const Financing = () => {
           <h1 className="fs-36 fw-800 lh-40 fs-sm-30 ">{data?.info?.heading}</h1>
           <h1 className="fs-36 fw-800 lh-40 fs-sm-30 color-blueberry">{data?.info?.call_msg}</h1>
         </div>
-        <Link href="/" className="">
+        <Link href="/contact" className="">
           <div
             className="w-fit-content rounded-6 align-items-center  button-twocolumn fs-14 fw-500 flex"
 

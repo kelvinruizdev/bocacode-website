@@ -1,40 +1,25 @@
 import React from "react";
 import styles from '../page.module.css'
-import data from '../data/contact.json'
+import Link from "next/link";
+import data from '../data/get-started.json'
+import UpcomingDates from "../components/UpcomingDates/page";
+import Testimonials from "../components/Testimonials/page";
 
-const Contact = () => {
+const GetStarted = () => {
   const { sub_heading, heading, paragraph, address, email_info, courses_info, talent, form } = data;
   return (
     <main className={styles.main}>
       <div className="maxwidth-1366 m-auto py-50 flex gap-24 column-tablet container ">
 
-        <div className="w-50 w-100-tablet gap-16 column">
+        <div className="w-50 w-100-tablet gap-16 column justify-center">
           <div className="column">
-            <h2 className="fs-18 fw-700 lh-28 color-royalblue">{sub_heading}</h2>
+            <h2 className="fs-18 fw-700 lh-28 color-rose">{sub_heading}</h2>
             <h1 className="fs-30 fw-700 lh-36 ">{heading}</h1>
           </div>
 
           <p
             className="fs-16 fw-400 lh-24 color-gray"
             dangerouslySetInnerHTML={{ __html: paragraph }}
-          />
-          <p
-            className="fs-18 fw-600 lh-24 color-gray"
-            dangerouslySetInnerHTML={{ __html: address }}
-          />
-          <p
-            className="fs-16 fw-700 lh-24 color-royalblue"
-            dangerouslySetInnerHTML={{ __html: email_info }}
-          />
-          <h2 className="fs-20 fw-700 lh-24">{courses_info.title}</h2>
-          <p
-            className="fs-16 fw-400 lh-24 color-gray"
-            dangerouslySetInnerHTML={{ __html: courses_info.content }}
-          />
-          <h2 className="fs-20 fw-700 lh-24">{talent.title}</h2>
-          <p
-            className="fs-16 fw-400 lh-24 color-gray"
-            dangerouslySetInnerHTML={{ __html: talent.content }}
           />
         </div>
 
@@ -60,18 +45,12 @@ const Contact = () => {
             </div>
 
             <div className="flex ">
-              <select name="Interest" id="interest" className="flex form-input w-100 p-12 rounded-8 bg-white fs-14 fw-400 lh-20 color-grisnoble">
-                <option disabled="">Choose your Interest:</option>
-                <option value="talent">Talent</option>
-                <option value="courses">Courses</option>
-                <option value="General">General</option>
+              <select name="contact-method" id="contact-method" className="flex form-input w-100 p-12 rounded-8 bg-white fs-14 fw-400 lh-20 color-grisnoble">
+                <option disabled>Preferred Contact Method</option>
+                <option value="call">Call</option>
+                <option value="text">Text</option>
+                <option value="email">Email</option>
               </select>
-            </div>
-
-            <div>
-              <textarea id="message" name="message" rows="5" cols="33" placeholder="Enter your message" className="form-input flex w-100 p-12 rounded-8 bg-white fs-14 fw-400 lh-20 color-grisnoble">
-
-              </textarea>
             </div>
 
             <div>
@@ -83,9 +62,21 @@ const Contact = () => {
 
         </div>
 
+      </div >
+
+      <div className="align-items-center column py-50 gap-45">
+        <div className="column text-center px-20">
+          <h1 className="fs-36 fw-800 lh-40 fs-sm-30 ">{data?.info?.heading}</h1>
+          <h1 className="fs-36 fw-800 lh-40 fs-sm-30 color-blueberry">{data?.info?.call_msg}</h1>
+        </div>
       </div>
-    </main>
+
+      <UpcomingDates data={data?.upcoming_dates} />
+
+      <Testimonials/>
+
+    </main >
   );
 };
 
-export default Contact;
+export default GetStarted;

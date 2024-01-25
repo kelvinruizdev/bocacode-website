@@ -10,11 +10,12 @@ import Credentials from './components/Credentials/page'
 import Paths from './components/Paths/page';
 import TwoColumns from './components/TwoColumns/page';
 import data from './data/home.json'
+import data2 from './data/home.yaml'
 
 
 export default function Home() {
 
-  console.log(data?.pricing_info_variable)
+  console.log(data)
 
   return (
     <main className={styles.main}>

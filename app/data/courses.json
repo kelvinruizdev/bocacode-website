@@ -1,62 +1,20 @@
 {
-    "header": {
-        "heading": {
-            "text": "Get the training you need to land the",
-            "color": "rgb(229, 231, 235)",
-            "extra_text":"job of your dreams."
-        },
-        "content": {
-            "text": "Whether you're a beginner or have years of experience, we have courses to help you learn and be certified in software engineering, web development, mobile development, security, dev-ops, project management, Web3, AI, and more.",
-            "color": "rgb(229, 231, 235)"
+    "sub_heading": "GET  US",
+    "heading": "Speak with an Admissions Advisor",
+    "paragraph": "Join a growing network of industry professionals who have transformed their lives with lucrative careers in technology. <br> <ul style='padding:20px 0 0 20px'  ><li>Learn more about Boca Code certificate courses</li><li>Find out which course is right for you</li><li>Discuss tuition, payment plans, and scholarships</li></ul>",
 
-        },
-        "bullets": [],
-        "background_image": "/images/landing-image.jpg",
-        "image": "",
-        "button_1":
-            {
-                "button_text": "Get Started",
-                "button_link": "/get-started",
-                "button_color": "#FACC15"
-            },
-        "button_2":
-            {
-                "button_text": "Find a Course",
-                "button_link": "/courses",
-                "button_color": "#E5E7EB"
-            }
+    "form":{
+        "motivation":"Interested in our courses, hiring talented engineers, or something else? Reach out now.",
+        "conditions":"By clicking the button above, you accept our Terms of Service and Privacy Policy. You agree to receive calls and emails about our courses and workshops.",
+        "button":{
+            "text":"Request Information >"
+        }
     },
-    "title_container": [
-        {
-            "heading": "Invest in Yourself",
-            "paragraph": "We believe that training is the best way to get ahead in life and in our careers. The best training helps accelerate your learning and lets you advance fast."
-        },
-        {
-            "heading": "Find Your Career Path",
-            "paragraph": "Choose the right training for your career. If you're not sure, schedule a call with an Admissions Advisor <a href='/contact' style='color: #0284c7;'> here </a> to find out which classes are right for you."
-        },
-        {
-            "heading": "Not sure where to start",
-            "paragraph": "If you're not sure which class is best for you, our <a href='/contact' style='color: #0284c7;'> admissions team </a> is ready to help."
-        }
-    ],
-    "carousel": [
-        {
-            "image": "/images/students.jpg",
-            "title": "Learn In-Demand Skills",
-            "content": "Our relationships with tech companies help us tailor our curriculum to teach you the skills software companies are hiring for."
-        },
-        {
-            "image": "/images/staff.jpg",
-            "title": "Learn from Experts",
-            "content": "Learn from senior-level professionals with successful careers in tech and real industry experience."
-        },
-        {
-            "image": "/images/comunify-app.jpg",
-            "title": "Work on Real Projects",
-            "content": "Solve real problems and graduate with real experience. You'll get to work on real projects so you're prepared to solve real-world problems."
-        }
-    ],
+    "title_container":{
+        "heading": "Find Your Career Path",
+        "paragraph": "Choose the right training for your career. If you're not sure, schedule a call with an Admissions Advisor <a href='/contact' style='color: #0284c7;'> here </a> to find out which classes are right for you."
+    },
+
     "pricing_info_variable": [
         {
             "heading": "Data Analytics and Python",
@@ -164,6 +122,76 @@
             }
         }
     ],
+    "title_container_3": {
+        "heading": "Creativity",
+        "paragraph": "Software Engineering is a surprisingly creative field. Building and designing apps requires a balance between logic and creativity using both hemispheres of our brains."
+    },
+    "qualities":[
+        {
+            "image": "/images/software-engineering/zen-path.png",
+            
+            "title": "Inventive Project Ideas",
+            "content": "Coming up with new projects to build can be like an artist deciding what to paint, only with fewer limitations.",
+            "link": "/"
+        },
+        {
+            "image": "/images/software-engineering/Sarah-Kuss.png",
+            
+            "title": "Problem Solving",
+            "content": "Elegant and efficient solutions to complex problems require creative thinking and innovation.",
+            "link": "/"
+        },
+        {
+            "image": "/images/software-engineering/Brian-Pinney.png",
+            
+            "title": "Styling & Designing Sites",
+            "content": "We encourage students to get creative and have fun and pour themselves in styling their sites.",
+            "link": "/"
+        },
+        {
+            "image": "/images/software-engineering/Liz-Cerami.png",
+            
+            "title": "User Experience (UX) Design",
+            "content": "Many enjoy focusing on creating intuitive and enjoyable user interfaces that are aesthetically pleasing, easy to use, and efficient.",
+            "link": "/"
+        },
+        {
+            "image": "/images/software-engineering/echo.webp",
+            
+            "title": "Algorithm Design",
+            "content": "Designing algorithms that solve problems optimally often requires creative thinking. We come up with novel approaches to turn inventive processes into code.",
+            "link": "/"
+        },
+        {
+            "image": "/images/software-engineering/jonathans.jpg",
+            
+            "title": "Innovation & Research",
+            "content": "Software engineers need to stay up to date with the latest developments, explore new ideas, and conduct research to innovate and improve existing systems.",
+            "link": "/"
+        },
+        {
+            "image": "/images/software-engineering/camila.jpg",
+            
+            "title": "Experimenting with Generative AI",
+            "content": "New technologies are constantly emerging. We need to stay on top of the latest advancements and utilize the best tools to optimize our work.",
+            "link": "/"
+        },
+        {
+            "image": "/images/software-engineering/hallify.png",
+            
+            "title": "Architectural Design",
+            "content": "Designing software involves making decisions about how different components will interact, how data will flow, and how the system will be structured.",
+            "link": "/"
+        },
+        {
+            "image": "/images/software-engineering/scholarship-winners.jpg",
+            
+            "title": "Collaboration & Teamwork",
+            "content": "Creative problem-solving and brainstorming are common in teams, where individuals contribute diverse perspectives and ideas to find the best solutions.",
+            "link": "/"
+        }
+        
+    ],
     "two_columns": {
         "left": {
             "heading": {
@@ -192,4 +220,6 @@
             "image": "/images/graduation.jpg"
         }
     }
+    
+
 }

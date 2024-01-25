@@ -69,7 +69,7 @@ const Navbar = () => {
 
           <div className="flex align-items-center ">
             <div className="button-nav">
-              <Link href="/contact">Get Started</Link>
+              <Link href="/get-started">Get Started</Link>
             </div>
 
 

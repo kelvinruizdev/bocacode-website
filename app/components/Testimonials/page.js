@@ -41,6 +41,7 @@ const Testimonials = () => {
         dots: false,
         infinite: true,
         speed: 500,
+        autoplay: true,
         arrows: false,
         className: "testimonial-container",
         nextArrow: <CustomNextArrow />,
@@ -79,8 +80,8 @@ const Testimonials = () => {
     return (
         <>
 
-            <div className="bg-gray py-50 block">
-                <div className="maxwidth-1366 m-auto container row column-sm  gap-16-sm justify-beetwen align-center align-start-sm">
+            <div className="bg-gray container block">
+                <div className="maxwidth-1366 m-auto py-16 row column-sm  gap-16-sm justify-beetwen align-center align-start-sm">
                     <h2 className="fs-48 fw-700 lh-48 fs-sm-36 w-60 w-sm-100">{data?.heading}</h2>
                     <div className="row gap-16"><CustomPrevArrow /> <CustomNextArrow /></div>
                 </div>

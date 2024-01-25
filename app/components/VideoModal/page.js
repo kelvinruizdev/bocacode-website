@@ -38,7 +38,7 @@ const VideoModal = ({ videoLink, play }) => {
         >
 
             <div
-                className="modal"
+                className=" modal-video-body"
             >
                 <ReactPlayer
                     url={videoLink}
